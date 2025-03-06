@@ -1,0 +1,56 @@
+import React from 'react'
+import BottomNav from '../components/BottomNav'
+
+export default function TopCountries() {
+    return (
+        <section className='w-full h-screen flex flex-col justify-center items-center relative'>
+            <video
+                className='bg-black w-full h-full object-cover'
+                loop
+                autoPlay
+                muted
+                playsInline
+                preload='auto'
+                width='100%'
+                height='100%'
+            >
+                <source
+                    src='/videos/topCountries/mobile.mp4'
+                    type='video/mp4'
+                    media='(max-width:640px)'
+                ></source>
+                <source
+                    src='/videos/topCountries/desktop.mp4'
+                    type='video/mp4'
+                ></source>
+            </video>
+            <p className='absolute top-3 w-full flex flex-col items-center justify-center z-20 text-center font-[600] tracking-widest text-[#ff033a] text-xl sm:text-4xl logo logoShadow'>
+                SOPRANO ESCORT
+            </p>
+            <div className='fixed top-16 sm:top-20 left-2 sm:left-6 flex items-center gap-2 z-30 py-1'>
+                <img
+                    title='Топ страны аватар'
+                    className='object-cover w-10 sm:w-14 h-10 sm:h-14 bg-gradient-to-t from-violet-600 to-sky-400 p-[2px] rounded-full'
+                    src='/images/ava/ava2.avif'
+                    alt='Топ страны аватар'
+                    width={40}
+                    height={40}
+                    loading='lazy'
+                />
+                <p className='text-center text-white font-bold tracking-[2px] text-sm drop-shadow-md'>
+                    Топ страны
+                </p>
+            </div>
+            <nav className='md:hidden flex justify-start w-full'>
+                <BottomNav
+                    titleLeft={'вип вакансии'}
+                    linkLeft={'/vipVacancies'}
+                    avaLeft={'/images/ava/ava1.avif'}
+                    titleRight={'весь мир'}
+                    linkRight={'/locations'}
+                    avaRight={'/images/ava/ava3.avif'}
+                />
+            </nav>
+        </section>
+    )
+}
