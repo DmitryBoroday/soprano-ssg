@@ -31,3 +31,11 @@ body {
   --swiper-pagination-fraction-color: #ffffff !important;
   --swiper-pagination-bottom: 54px;
 }
+
+.thumbs .swiper-slide {
+  opacity: 0.6;
+}
+
+.thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}

@@ -19,7 +19,7 @@ export default function BottomNav({
     linkRight,
 }: Props) {
     return (
-        <nav className='w-full h-full bg-black text-neutral-400 mt-2'>
+        <nav className='w-full h-full bg-black text-neutral-400 mt-2 z-40'>
             <div className='flex items-center justify-start px-2 gap-2 text-xs font-bold tracking-widest'>
                 <Link
                     href={linkLeft}
