@@ -13,7 +13,7 @@ const data = [
     {
         desktopVideo: '/videos/videoNav/deskVip.mp4',
         verticalVideo: '/videos/videoNav/mobVip.mp4',
-        avaImage: '/images/header/ava1.avif',
+        avaImage: '/images/ava/ava1.avif',
         title: 'ВИП ВАКАНСИИ',
         shortText: 'Каждое эскорт-агентство проходит проверку на наличие в черном списке и отбираются только топовые, что бы предоставить самые лучшие условия работы девушек за границей',
         buttonText: 'Смотреть вакансии',
@@ -22,7 +22,7 @@ const data = [
     {
         desktopVideo: '/videos/videoNav/deskTop.mp4',
         verticalVideo: '/videos/videoNav/mobTop.mp4',
-        avaImage: '/images/header/ava2.avif',
+        avaImage: '/images/ava/ava2.avif',
         title: 'ТОП СТРАНЫ',
         shortText: 'Каждое эскорт-агентство проходит проверку на наличие в черном списке и отбираются только топовые, что бы предоставить самые лучшие условия работы девушек за границей',
         buttonText: 'Топ страны',
@@ -31,7 +31,7 @@ const data = [
     {
         desktopVideo: '/videos/videoNav/deskWorld.mp4',
         verticalVideo: '/videos/videoNav/mobWorld.mp4',
-        avaImage: '/images/header/ava3.avif',
+        avaImage: '/images/ava/ava3.avif',
         title: 'НАПРАВЛЕНИЯ',
         shortText: 'Высокооплачиваемая работа девушек в эскорте Европы, Азии, России, Америки, Африки и даже Австралии',
         buttonText: 'Выбрать направление',
@@ -40,7 +40,7 @@ const data = [
     {
         desktopVideo: '/videos/videoNav/deskGroup.mp4',
         verticalVideo: '/videos/videoNav/mobGroup.mp4',
-        avaImage: '/images/header/ava4.avif',
+        avaImage: '/images/ava/ava4.avif',
         title: 'НАШИ ГРУППЫ',
         shortText: 'Станьте участницей наших групп, узнайте об условиях работы моделью и отзывах девушек',
         buttonText: 'Перейти в группы',
@@ -49,7 +49,7 @@ const data = [
     {
         desktopVideo: '/videos/videoNav/deskBlog.mp4',
         verticalVideo: '/videos/videoNav/mobBlog.mp4',
-        avaImage: '/images/header/ava5.avif',
+        avaImage: '/images/ava/ava5.avif',
         title: 'БЛОГ',
         shortText: 'Статьи на тему безопасности, поведения в туре, условиях и требованиях для девушек и многое другое',
         buttonText: 'Смотреть наш блог',

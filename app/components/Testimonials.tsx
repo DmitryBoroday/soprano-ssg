@@ -22,7 +22,6 @@ export default function Testimonials() {
 
     return (
         <section
-            id='testimonials-section'
             className='bg-black w-full h-full flex flex-col justify-center items-center'
         >
             <div className='flex justify-center text-center w-full px-2 md:px-28 pt-16 sm:pt-12'>

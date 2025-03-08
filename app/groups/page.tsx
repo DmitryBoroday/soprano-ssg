@@ -6,47 +6,30 @@ import { MoveLeft, MoveRight } from 'lucide-react'
 
 const data = [
     {
-        agencyName: '1 Agency Name',
-        shortContent: '1 Short Contect',
+        agencyName: 'Группы',
+        shortContent: 'Высокооплачиваемая работа моделью от агентства SOPRANO ESCORT',
         thumbImage: '/images/swiperData/ava1.jpg',
         innerImg: '/images/swiperData/flag1.jpg',
-        link: '1 Link Url',
-        btnText: 'Button Text'
+        link: '/groups/admin',
+        btnText: 'Перейти в группы'
     },
     {
-        agencyName: '2 Agency Name',
-        shortContent: '2 Short Contect',
+        agencyName: 'Отзывы',
+        shortContent: 'Отзывы девушек от работы в эскорте за границей',
         thumbImage: '/images/swiperData/ava2.jpg',
         innerImg: '/images/swiperData/flag2.jpg',
-        link: '2 Link Url',
-        btnText: 'Button Text'
+        link: '/groups/testimonials',
+        btnText: 'Смотреть отзывы'
     },
     {
-        agencyName: '3 Agency Name',
-        shortContent: '3 Short Contect',
+        agencyName: 'Условия',
+        shortContent: 'Условия работы девушек в эскорте за границей',
         thumbImage: '/images/swiperData/ava3.jpg',
         innerImg: '/images/swiperData/flag3.jpg',
-        link: '3 Link Url',
-        btnText: 'Button Text'
-    },
-    {
-        agencyName: '4 Agency Name',
-        shortContent: '4 Short Contect',
-        thumbImage: '/images/swiperData/ava4.jpg',
-        innerImg: '/images/swiperData/flag4.jpg',
-        link: '4 Link Url',
-        btnText: 'Button Text'
-    },
-    {
-        agencyName: '5 Agency Name',
-        shortContent: '5 Short Contect',
-        thumbImage: '/images/swiperData/ava5.jpg',
-        innerImg: '/images/swiperData/flag5.jpg',
-        link: '5 Link Url',
-        btnText: 'Button Text'
+        link: '/groups/conditions',
+        btnText: 'Изучить условия'
     },
 ]
-
 
 export default function Groups() {
     return (

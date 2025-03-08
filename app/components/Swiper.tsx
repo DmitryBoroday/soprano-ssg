@@ -52,7 +52,7 @@ export default function MainSwiper({ data }: any) {
                                                     </p>
                                                 </div>
                                                 <p className='textShadow font-normal text-md text-center'>
-                                                    short content
+                                                    {agency.shortContent}
                                                 </p>
                                                 <ChevronDown size={32} />
                                             </div>
@@ -61,14 +61,14 @@ export default function MainSwiper({ data }: any) {
                                 </Link>
                             </div>
                             <div className='absolute w-full h-full left-0 bottom-0 md:top-0 hidden md:flex flex-col justify-center items-center md:items-start text-white md:pl-24'>
-                                <div className='w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center font-bold  md:text-start gap-4 mb-8 md:mb-0'>
+                                <div className='w-full md:w-1/2 xl:w-1/3 flex flex-col justify-center items-center md:items-start text-center font-bold  md:text-start gap-4 mb-8 md:mb-0'>
                                     <p className='text-5xl md:text-8xl textShadow font-normal'>
                                         {agency.agencyName}
                                     </p>
                                     <p className='text-2xl textShadow font-normal hidden md:block'>
                                         {agency.shortContent}
                                     </p>
-                                    <div className='w-3/4 md:w-1/2 flex flex-col justify-start items-center gap-4'>
+                                    <div className='w-3/4 xl:w-2/3 flex flex-col justify-start items-center gap-4'>
                                         <Link
                                             href={agency.link}
                                             className='bg-[#ff033a] px-6 py-4 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-lg text-xl'
@@ -112,7 +112,7 @@ export default function MainSwiper({ data }: any) {
                                     <div className='absolute inset-0 text-sm flex flex-col items-center justify-end pb-2 sm:pb-3'>
                                         <img
                                             title='inside img flag or ava'
-                                            className='object-cover w-8 bg-black rounded-full'
+                                            className='object-cover w-8 h-8 bg-black rounded-full shadow-md'
                                             src={agency.innerImg}
                                             alt='inside img flag or ava'
                                             width={32}
@@ -122,7 +122,7 @@ export default function MainSwiper({ data }: any) {
                                         />
                                     </div>
                                 </div>
-                                <div className='flex flex-col justify-center items-center text-center font-bold text-sm md:text-lg text-white drop-shadow-md'>
+                                <div className='flex flex-col justify-center items-center text-center font-semibold text-sm md:text-lg text-white drop-shadow-md'>
                                     <p>{agency.agencyName}</p>
                                 </div>
                             </div>
