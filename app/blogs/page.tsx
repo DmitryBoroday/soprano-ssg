@@ -9,7 +9,7 @@ const data = [
         shortContent: '1 Short Contect',
         thumbImage: '/images/swiperData/ava1.jpg',
         innerImg: '/images/swiperData/flag1.jpg',
-        link: '1 Link Url',
+        link: '/blogs/1',
         btnText: 'Button Text'
     },
     {
@@ -17,7 +17,7 @@ const data = [
         shortContent: '2 Short Contect',
         thumbImage: '/images/swiperData/ava2.jpg',
         innerImg: '/images/swiperData/flag2.jpg',
-        link: '2 Link Url',
+        link: '/blogs/2',
         btnText: 'Button Text'
     },
     {
@@ -25,7 +25,7 @@ const data = [
         shortContent: '3 Short Contect',
         thumbImage: '/images/swiperData/ava3.jpg',
         innerImg: '/images/swiperData/flag3.jpg',
-        link: '3 Link Url',
+        link: '/blogs/3',
         btnText: 'Button Text'
     },
     {
@@ -33,7 +33,7 @@ const data = [
         shortContent: '4 Short Contect',
         thumbImage: '/images/swiperData/ava4.jpg',
         innerImg: '/images/swiperData/flag4.jpg',
-        link: '4 Link Url',
+        link: '/blogs/4',
         btnText: 'Button Text'
     },
     {
@@ -41,7 +41,7 @@ const data = [
         shortContent: '5 Short Contect',
         thumbImage: '/images/swiperData/ava5.jpg',
         innerImg: '/images/swiperData/flag5.jpg',
-        link: '5 Link Url',
+        link: '/blogs/5',
         btnText: 'Button Text'
     },
 ]

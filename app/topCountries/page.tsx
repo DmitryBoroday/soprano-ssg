@@ -1,48 +1,53 @@
 import React from 'react'
 import BottomNav from '../components/BottomNav'
-import MainSwiper from '../components/Swiper'
 import { MoveLeft, MoveRight } from 'lucide-react'
 import Link from 'next/link'
+import TopCountriesSwiper from '../components/TopCountriesSwiper'
 
 const data = [
     {
-        agencyName: '1 Agency Name',
-        shortContent: '1 Short Contect',
+        countryTitle: '1 Country Name',
+        subTitle: 'Couintry sub title 1',
+        shortDescription: '1 Short Contect',
         thumbImage: '/images/swiperData/ava1.jpg',
-        innerImg: '/images/swiperData/flag1.jpg',
-        link: '1 Link Url',
+        flagImage: '/images/swiperData/flag1.jpg',
+        link: '/topCountries/1',
         btnText: 'Button Text'
     },
     {
-        agencyName: '2 Agency Name',
-        shortContent: '2 Short Contect',
+        countryTitle: '2 Country Name',
+        subTitle: 'Couintry sub title 2',
+        shortDescription: '2 Short Contect',
         thumbImage: '/images/swiperData/ava2.jpg',
-        innerImg: '/images/swiperData/flag2.jpg',
-        link: '2 Link Url',
+        flagImage: '/images/swiperData/flag2.jpg',
+        link: '/topCountries/2',
         btnText: 'Button Text'
     },
     {
-        agencyName: '3 Agency Name',
-        shortContent: '3 Short Contect',
+        countryTitle: '3 Country Name',
+        subTitle: 'Couintry sub title 3',
+        shortDescription: '3 Short Contect',
         thumbImage: '/images/swiperData/ava3.jpg',
-        innerImg: '/images/swiperData/flag3.jpg',
-        link: '3 Link Url',
+        flagImage: '/images/swiperData/flag3.jpg',
+        link: '/topCountries/3',
         btnText: 'Button Text'
     },
     {
-        agencyName: '4 Agency Name',
-        shortContent: '4 Short Contect',
+        countryTitle: '4 Country Name',
+        subTitle: 'Couintry sub title 4',
+        shortDescription: '4 Short Contect',
         thumbImage: '/images/swiperData/ava4.jpg',
-        innerImg: '/images/swiperData/flag4.jpg',
-        link: '4 Link Url',
+        flagImage: '/images/swiperData/flag4.jpg',
+        link: '/topCountries/4',
         btnText: 'Button Text'
     },
     {
-        agencyName: '5 Agency Name',
-        shortContent: '5 Short Contect',
+        countryTitle: '5 Country Name',
+        subTitle: 'Couintry sub title 5',
+        shortDescription: '5 Short Contect',
         thumbImage: '/images/swiperData/ava5.jpg',
-        innerImg: '/images/swiperData/flag5.jpg',
-        link: '5 Link Url',
+        flagImage: '/images/swiperData/flag5.jpg',
+        link: '/topCountries/5',
         btnText: 'Button Text'
     },
 ]
@@ -72,7 +77,7 @@ export default function TopCountries() {
                         type='video/mp4'
                     ></source>
                 </video>
-                <MainSwiper data={data} />
+                <TopCountriesSwiper data={data} />
                 <p className='absolute top-3 w-full flex flex-col items-center justify-center z-20 text-center font-[600] tracking-widest text-[#ff033a] text-xl sm:text-4xl logo logoShadow'>
                     SOPRANO ESCORT
                 </p>

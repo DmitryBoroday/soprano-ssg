@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import BottomNav from '../components/BottomNav';
-import MainSwiper from '../components/Swiper';
-import { MoveLeft, MoveRight } from 'lucide-react';
+import Link from 'next/link'
+import BottomNav from '../components/BottomNav'
+import MainSwiper from '../components/Swiper'
+import { MoveLeft, MoveRight } from 'lucide-react'
 
 const data = [
     {
@@ -46,7 +46,6 @@ const data = [
     },
 ]
 
-
 export default function VipVacancies() {
     return (
         <section className='w-full h-screen flex flex-col justify-center items-center'>
@@ -75,12 +74,12 @@ export default function VipVacancies() {
                 <p className='absolute top-3 w-full flex flex-col items-center justify-center z-20 text-center font-[600] tracking-widest text-[#ff033a] text-xl sm:text-4xl logo logoShadow'>
                     SOPRANO ESCORT
                 </p>
-                <div className='fixed top-32 right-2 sm:right-12'>
+                <div className='fixed top-20 sm:top-32 right-2 sm:right-12'>
                     <img
-                        title='Vip Escort Agencies'
-                        className='object-cover w-24'
-                        src='/images/vipVacancies/vip_.avif'
-                        alt='Vip Escort Agencies'
+                        title='Лого страницы'
+                        className='object-cover w-16 sm:w-24'
+                        src='/images/vipVacancies/vipSm.avif'
+                        alt='Лого страницы'
                         width={56}
                         height={56}
                         fetchPriority='high'

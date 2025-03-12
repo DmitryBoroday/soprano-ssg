@@ -43,7 +43,7 @@ export default function Testimonials() {
                     уникальным опытом, который дает возможность путешествовать и
                     наслаждаться жизнью
                 </p>
-                <div className='flex flex-col gap-2 items-center  text-md md:text-lg text-neutral-300 py-4 border-b-[1px] border-zinc-900'>
+                <div className='flex flex-col gap-2 items-center text-md md:text-lg text-neutral-300 text-center py-4 border-b-[1px] border-zinc-900'>
                     <img
                         title='Отзывы девушек о работе в эскорте за границей'
                         src='/images/groups/ava1.avif'
@@ -54,15 +54,12 @@ export default function Testimonials() {
                         loading='lazy'
                         fetchPriority='high'
                     />
-                    <p className='text-xs text-center'>Алина Израиль</p>
+                    <p className='text-xs'>Отзыв от Анны, 26 лет</p>
                     <p className='w-full md:w-2/3 indent-4 md:indent-8'>
-                        Отзывы от девушек о работе в эскорте за границей свидетельствуют о
-                        том, что это работа, которая может полностью изменить жизнь. Девушки
-                        отмечают, что эта работа позволяет им раскрывать свою сексуальность,
-                        становиться более уверенными и успешными.
+                        "Когда я впервые задумалась о работе в эскорте, меня терзали сомнения, но случайно наткнувшись на сайт Soprano Escort , я увидела множество предложений о работе. Заинтригованная, я решилась попробовать! Моя первая поездка в тур была очень насыщенной и прибыльной.  Я никогда не зарабатывала столько денег до этого!  Я почувствовала в себе силы и желание быть самодостаточной!   Благодаря этой работе я обрела финансовую независимость и уверенность в себе"
                     </p>
                 </div>
-                <div className='flex flex-col gap-2 items-center  text-md md:text-lg text-neutral-300 py-4 border-b-[1px] border-zinc-900'>
+                <div className='flex flex-col gap-2 items-center text-md md:text-lg text-neutral-300 text-center py-4 border-b-[1px] border-zinc-900'>
                     <img
                         title='Отзывы девушек о работе в эскорте за границей'
                         src='/images/groups/ava2.avif'
@@ -73,15 +70,12 @@ export default function Testimonials() {
                         loading='lazy'
                         fetchPriority='high'
                     />
-                    <p className='text-xs text-center'>Марго Грекция</p>
+                    <p className='text-xs'>Отзыв от Ольги, 30 лет</p>
                     <p className='w-full md:w-2/3 indent-4 md:indent-8'>
-                        Отзывы от девушек о работе в эскорте за границей свидетельствуют о
-                        том, что это работа, которая может полностью изменить жизнь. Девушки
-                        отмечают, что эта работа позволяет им раскрывать свою сексуальность,
-                        становиться более уверенными и успешными.
+                        "Эскорт никогда не был моим планом, но судьба привела меня к этому через сайт Soprano Escort, на котором я увидела, что можно заработать в путешествии. Теперь я путешествую по Европе, встречаю удивительных людей и открываю для себя новые культуры.  В этом мне помогает Soprano Escort, который гарантирует мне работу  в любой стране.  Я так благодарна этому сайту за возможность, которая позволила мне изменить свою жизнь и стать уверенной в своих решениях"
                     </p>
                 </div>
-                <div className='flex flex-col gap-2 items-center  text-md md:text-lg text-neutral-300 py-4 border-b-[1px] border-zinc-900'>
+                <div className='flex flex-col gap-2 items-center text-md md:text-lg text-neutral-300 text-center py-4 border-b-[1px] border-zinc-900'>
                     <img
                         title='Отзывы девушек о работе в эскорте за границей'
                         src='/images/groups/ava3.avif'
@@ -92,15 +86,14 @@ export default function Testimonials() {
                         loading='lazy'
                         fetchPriority='high'
                     />
-                    <p className='text-xs text-center'>Юля Берлин</p>
+                    <p className='text-xs'>Отзыв от Кати, 19 лет</p>
                     <p className='w-full md:w-2/3 indent-4 md:indent-8'>
-                        Отзывы от девушек о работе в эскорте за границей свидетельствуют о
-                        том, что это работа, которая может полностью изменить жизнь. Девушки
-                        отмечают, что эта работа позволяет им раскрывать свою сексуальность,
-                        становиться более уверенными и успешными.
+                        "История моего вступления в мир эскорта началась, когда я наткнулась на сайт Soprano Escort с советами и историями успешных девушек. Я нашла этот сайт по поиску в Гугле и узнала, как правильно выбрать агентство и подготовиться к первому туру в другую страну. Первый раз мне было немного волнительно, потому что приходилось познавать новые вещи, то, что никогда до этого не делала и даже не думала об этом.
+                        Сейчас с свободно езжу по разным странам и зарабатываю хорошие деньги!
+                        Эта работа помогла мне не только заработать на учебу, но и открыть в себе уверенность, о которой я даже не подозревала"
                     </p>
                 </div>
-                <div className='flex flex-col gap-2 items-center  text-md md:text-lg text-neutral-300 py-4 border-b-[1px] border-zinc-900'>
+                <div className='flex flex-col gap-2 items-center text-md md:text-lg text-neutral-300 text-center py-4 border-b-[1px] border-zinc-900'>
                     <img
                         title='Отзывы девушек о работе в эскорте за границей'
                         src='/images/groups/ava4.avif'
@@ -111,12 +104,10 @@ export default function Testimonials() {
                         loading='lazy'
                         fetchPriority='high'
                     />
-                    <p className='text-xs text-center'>Маша Франция</p>
+                    <p className='text-xs'>Отзыв от Виктории, 29 лет</p>
                     <p className='w-full md:w-2/3 indent-4 md:indent-8'>
-                        Отзывы от девушек о работе в эскорте за границей свидетельствуют о
-                        том, что это работа, которая может полностью изменить жизнь. Девушки
-                        отмечают, что эта работа позволяет им раскрывать свою сексуальность,
-                        становиться более уверенными и успешными.
+                        "С этой сферой я была уже знакома, но, к сожалению, мне  довелось столкнуться с мошенниками. Я продолжала мониторить предложения и искала проверенные туры, которые действительно обеспечивали безопасные условия для работы. В итоге , я нашла себе хорошую работу  благодаря сайту Soprano Escort, где есть огромный выбор безопасных  туров и профессиональных менеджеров по всему миру!
+                        Спасибо за то, что вы есть!"
                     </p>
                 </div>
             </div>

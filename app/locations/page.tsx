@@ -6,35 +6,35 @@ import { MoveLeft, MoveRight } from 'lucide-react'
 
 const data = [
     {
-        agencyName: '1 Agency Name',
+        agencyName: '1 Country Name',
         shortContent: '1 Short Contect',
         thumbImage: '/images/swiperData/ava1.jpg',
         innerImg: '/images/swiperData/flag1.jpg',
-        link: '1 Link Url',
+        link: '/locations/1',
         btnText: 'Button Text'
     },
     {
-        agencyName: '2 Agency Name',
+        agencyName: '2 Country Name',
         shortContent: '2 Short Contect',
         thumbImage: '/images/swiperData/ava2.jpg',
         innerImg: '/images/swiperData/flag2.jpg',
-        link: '2 Link Url',
+        link: '/locations/2',
         btnText: 'Button Text'
     },
     {
-        agencyName: '3 Agency Name',
+        agencyName: '3 Country Name',
         shortContent: '3 Short Contect',
         thumbImage: '/images/swiperData/ava3.jpg',
         innerImg: '/images/swiperData/flag3.jpg',
-        link: '3 Link Url',
+        link: '/locations/3',
         btnText: 'Button Text'
     },
     {
-        agencyName: '4 Agency Name',
+        agencyName: '4 Country Name',
         shortContent: '4 Short Contect',
         thumbImage: '/images/swiperData/ava4.jpg',
         innerImg: '/images/swiperData/flag4.jpg',
-        link: '4 Link Url',
+        link: '/locations/4',
         btnText: 'Button Text'
     },
     {
@@ -42,7 +42,7 @@ const data = [
         shortContent: '5 Short Contect',
         thumbImage: '/images/swiperData/ava5.jpg',
         innerImg: '/images/swiperData/flag5.jpg',
-        link: '5 Link Url',
+        link: '/locations/5',
         btnText: 'Button Text'
     },
 ]
@@ -77,11 +77,13 @@ export default function Locations() {
                 </p>
                 <div className='fixed top-16 sm:top-20 left-2 sm:left-6 flex items-center gap-2 z-30 py-1'>
                     <img
+                        title='Эскорт вакансии по всему миру'
                         className='object-cover w-10 sm:w-14 h-10 sm:h-14 bg-gradient-to-t from-purple-900 to-violet-400 p-[2px] rounded-full'
                         src='/images/ava/ava3.avif'
-                        alt='flag'
-                        fetchPriority='high'
-                        loading='eager'
+                        alt='Эскорт вакансии по всему миру'
+                        loading='lazy'
+                        width={48}
+                        height={48}
                     />
                     <h1 className='text-center text-white font-bold tracking-[2px] text-sm drop-shadow-md'>
                         Весь мир
