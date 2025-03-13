@@ -1,47 +1,47 @@
 import React from 'react'
 import BottomNav from '../components/BottomNav'
-import MainSwiper from '../components/Swiper'
 import Link from 'next/link'
 import { MoveLeft, MoveRight } from 'lucide-react'
+import LocationsSwiper from '../components/LocationsSwiper'
 
 const data = [
     {
-        agencyName: '1 Country Name',
-        shortContent: '1 Short Contect',
+        locationTitle: '1 Country Name',
+        shortDescription: '1 Short Contect',
         thumbImage: '/images/swiperData/ava1.jpg',
-        innerImg: '/images/swiperData/flag1.jpg',
+        locationFlagImage: '/images/swiperData/flag1.jpg',
         link: '/locations/1',
         btnText: 'Button Text'
     },
     {
-        agencyName: '2 Country Name',
-        shortContent: '2 Short Contect',
+        locationTitle: '2 Country Name',
+        shortDescription: '2 Short Contect',
         thumbImage: '/images/swiperData/ava2.jpg',
-        innerImg: '/images/swiperData/flag2.jpg',
+        locationFlagImage: '/images/swiperData/flag2.jpg',
         link: '/locations/2',
         btnText: 'Button Text'
     },
     {
-        agencyName: '3 Country Name',
-        shortContent: '3 Short Contect',
+        locationTitle: '3 Country Name',
+        shortDescription: '3 Short Contect',
         thumbImage: '/images/swiperData/ava3.jpg',
-        innerImg: '/images/swiperData/flag3.jpg',
+        locationFlagImage: '/images/swiperData/flag3.jpg',
         link: '/locations/3',
         btnText: 'Button Text'
     },
     {
-        agencyName: '4 Country Name',
-        shortContent: '4 Short Contect',
+        locationTitle: '4 Country Name',
+        shortDescription: '4 Short Contect',
         thumbImage: '/images/swiperData/ava4.jpg',
-        innerImg: '/images/swiperData/flag4.jpg',
+        locationFlagImage: '/images/swiperData/flag4.jpg',
         link: '/locations/4',
         btnText: 'Button Text'
     },
     {
-        agencyName: '5 Agency Name',
-        shortContent: '5 Short Contect',
+        locationTitle: '5 Agency Name',
+        shortDescription: '5 Short Contect',
         thumbImage: '/images/swiperData/ava5.jpg',
-        innerImg: '/images/swiperData/flag5.jpg',
+        locationFlagImage: '/images/swiperData/flag5.jpg',
         link: '/locations/5',
         btnText: 'Button Text'
     },
@@ -71,7 +71,8 @@ export default function Locations() {
                         type='video/mp4'
                     ></source>
                 </video>
-                <MainSwiper data={data} />
+                <LocationsSwiper data={data} />
+                {/* <MainSwiper data={data} /> */}
                 <p className='absolute top-3 w-full flex flex-col items-center justify-center z-20 text-center font-[600] tracking-widest text-[#ff033a] text-xl sm:text-4xl logo logoShadow'>
                     SOPRANO ESCORT
                 </p>

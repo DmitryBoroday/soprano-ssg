@@ -11,6 +11,7 @@ import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
 
 
+
 export default function MainSwiper({ data }: any) {
     const [thumbsSwiper, setThumbsSwiper]: any = useState(null)
     return (
@@ -29,7 +30,7 @@ export default function MainSwiper({ data }: any) {
                             <div className='absolute inset-0 md:hidden flex flex-col justify-center items-center px-2 bg-gradient-to-t from-black via-white/10 to-white/10'>
                                 <Link
                                     href={agency.link}
-                                    className='flex items-center rounded-full p-1 text-white gap-2'
+                                    className='flex items-center rounded-full p-1 text-white gap-2 '
                                 >
                                     <div className='flex flex-col items-center gap-2 relative'>
                                         <div className='absolute flex items-center z-30 -top-8'>
@@ -48,7 +49,7 @@ export default function MainSwiper({ data }: any) {
                                             <div className='flex flex-col items-center gap-2 px-2 pt-8'>
                                                 <div className='flex items-center border-b-[1px] border-neutral-400'>
                                                     <p className='text-center text-2xl font-normal w-full textShadow'>
-                                                        {agency.agencyName}
+                                                        {agency.vipAgencyName}
                                                     </p>
                                                 </div>
                                                 <p className='textShadow font-normal text-md text-center'>
@@ -62,12 +63,12 @@ export default function MainSwiper({ data }: any) {
                             </div>
                             <div className='absolute w-full h-full left-0 bottom-0 md:top-0 hidden md:flex flex-col justify-center items-center md:items-start text-white md:pl-24'>
                                 <div className='w-full md:w-1/2 xl:w-1/3 flex flex-col justify-center items-center md:items-start text-center font-bold  md:text-start gap-4 mb-8 md:mb-0'>
-                                    <p className='text-5xl md:text-8xl textShadow font-normal'>
-                                        {agency.agencyName}
-                                    </p>
-                                    <p className='text-2xl textShadow font-normal hidden md:block'>
+                                    <h1 className='text-5xl md:text-8xl textShadow font-normal'>
+                                        {agency.vipAgencyName}
+                                    </h1>
+                                    <h2 className='text-2xl textShadow font-normal hidden md:block'>
                                         {agency.shortContent}
-                                    </p>
+                                    </h2>
                                     <div className='w-3/4 xl:w-2/3 flex flex-col justify-start items-center gap-4'>
                                         <Link
                                             href={agency.link}
@@ -113,7 +114,7 @@ export default function MainSwiper({ data }: any) {
                                         <img
                                             title='inside img flag or ava'
                                             className='object-cover w-8 h-8 bg-black rounded-full shadow-md'
-                                            src={agency.innerImg}
+                                            src='/images/vipVacancies/vipSm.avif'
                                             alt='inside img flag or ava'
                                             width={32}
                                             height={32}
@@ -123,7 +124,7 @@ export default function MainSwiper({ data }: any) {
                                     </div>
                                 </div>
                                 <div className='flex flex-col justify-center items-center text-center font-semibold text-sm md:text-lg text-white drop-shadow-md'>
-                                    <p>{agency.agencyName}</p>
+                                    <p>{agency.vipAgencyName}</p>
                                 </div>
                             </div>
                         </SwiperSlide>

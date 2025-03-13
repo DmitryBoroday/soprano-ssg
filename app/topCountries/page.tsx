@@ -52,7 +52,6 @@ const data = [
     },
 ]
 
-
 export default function TopCountries() {
     return (
         <section className='w-full h-screen flex flex-col justify-center items-center'>

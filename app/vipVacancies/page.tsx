@@ -5,42 +5,37 @@ import { MoveLeft, MoveRight } from 'lucide-react'
 
 const data = [
     {
-        agencyName: '1 Agency Name',
+        vipAgencyName: '1 Agency Name',
         shortContent: '1 Short Contect',
         thumbImage: '/images/swiperData/ava1.jpg',
-        innerImg: '/images/swiperData/flag1.jpg',
         link: '/vipVacancies/1',
         btnText: 'Button Text'
     },
     {
-        agencyName: '2 Agency Name',
+        vipAgencyName: '2 Agency Name',
         shortContent: '2 Short Contect',
         thumbImage: '/images/swiperData/ava2.jpg',
-        innerImg: '/images/swiperData/flag2.jpg',
         link: '/vipVacancies/2',
         btnText: 'Button Text'
     },
     {
-        agencyName: '3 Agency Name',
+        vipAgencyName: '3 Agency Name',
         shortContent: '3 Short Contect',
         thumbImage: '/images/swiperData/ava3.jpg',
-        innerImg: '/images/swiperData/flag3.jpg',
         link: '/vipVacancies/3',
         btnText: 'Button Text'
     },
     {
-        agencyName: '4 Agency Name',
+        vipAgencyName: '4 Agency Name',
         shortContent: '4 Short Contect',
         thumbImage: '/images/swiperData/ava4.jpg',
-        innerImg: '/images/swiperData/flag4.jpg',
         link: '/vipVacancies/4',
         btnText: 'Button Text'
     },
     {
-        agencyName: '5 Agency Name',
+        vipAgencyName: '5 Agency Name',
         shortContent: '5 Short Contect',
         thumbImage: '/images/swiperData/ava5.jpg',
-        innerImg: '/images/swiperData/flag5.jpg',
         link: '/vipVacancies/5',
         btnText: 'Button Text'
     },
