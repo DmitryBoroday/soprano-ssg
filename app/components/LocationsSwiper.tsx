@@ -9,6 +9,7 @@ import 'swiper/css/thumbs'
 import 'swiper/css/navigation'
 import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
+import { PortableText } from 'next-sanity'
 
 export default function LocationsSwiper({ data }: any) {
     const [thumbsSwiper, setThumbsSwiper]: any = useState(null)
@@ -22,21 +23,21 @@ export default function LocationsSwiper({ data }: any) {
                 modules={[FreeMode, Thumbs, Navigation]}
                 className='w-full h-screen'
             >
-                {data.map((agency: any, idx: any) => (
+                {data.map((location: any, idx: any) => (
                     <SwiperSlide key={idx}>
                         <div className='w-full h-full relative'>
                             <div className='absolute inset-0 md:hidden flex flex-col justify-center items-center px-2 bg-gradient-to-t from-black via-white/10 to-white/10'>
                                 <Link
-                                    href={agency.link}
+                                    href={`/locations/${location.slug}`}
                                     className='flex items-center rounded-full p-1 text-white gap-2'
                                 >
                                     <div className='flex flex-col items-center gap-2 relative'>
                                         <div className='absolute flex items-center z-30 -top-8'>
                                             <img
-                                                title='Vip Vacancy Agency Avatar'
+                                                title='Фото локации'
                                                 className='object-cover w-16 h-16 rounded-full bg-gradient-to-t from-purple-900 to-violet-400 p-[3px]'
-                                                src={agency.thumbImage}
-                                                alt='Vip Vacancy Agency Avatar'
+                                                src={location.locationFlagImage}
+                                                alt='Фото локации'
                                                 width={64}
                                                 height={64}
                                                 fetchPriority='high'
@@ -46,13 +47,13 @@ export default function LocationsSwiper({ data }: any) {
                                         <div className='bg-gradient-to-r from-transparent via-black to-transparent flex items-center justify-around rounded-xl py-2 w-5/6 min-w-[220px] shadow-lg text-white'>
                                             <div className='flex flex-col items-center gap-2 px-2 pt-8'>
                                                 <div className='flex items-center border-b-[1px] border-neutral-400'>
-                                                    <p className='text-center text-2xl font-normal w-full textShadow'>
-                                                        {agency.locationTitle}
-                                                    </p>
+                                                    <h1 className='text-center text-2xl font-normal w-full textShadow'>
+                                                        {location.locationTitle}
+                                                    </h1>
                                                 </div>
-                                                <p className='textShadow font-normal text-md text-center'>
-                                                    {agency.shortDescription}
-                                                </p>
+                                                <h2 className='textShadow font-normal text-md text-center'>
+                                                    <PortableText value={location.shortDescription} />
+                                                </h2>
                                                 <ChevronDown size={32} />
                                             </div>
                                         </div>
@@ -61,19 +62,19 @@ export default function LocationsSwiper({ data }: any) {
                             </div>
                             <div className='absolute w-full h-full left-0 bottom-0 md:top-0 hidden md:flex flex-col justify-center items-center md:items-start text-white md:pl-24'>
                                 <div className='w-full md:w-1/2 xl:w-1/3 flex flex-col justify-center items-center md:items-start text-center font-bold  md:text-start gap-4 mb-8 md:mb-0'>
-                                    <p className='text-5xl md:text-8xl textShadow font-normal'>
-                                        {agency.locationTitle}
-                                    </p>
-                                    <p className='text-2xl textShadow font-normal hidden md:block'>
-                                        {agency.shortDescription}
-                                    </p>
+                                    <h1 className='text-5xl md:text-8xl textShadow font-normal'>
+                                        {location.locationTitle}
+                                    </h1>
+                                    <h2 className='text-2xl textShadow font-normal hidden md:block'>
+                                        <PortableText value={location.shortDescription} />
+                                    </h2>
                                     <div className='w-3/4 xl:w-2/3 flex flex-col justify-start items-center gap-4'>
                                         <Link
-                                            href={agency.link}
+                                            href={`/locations/${location.slug}`}
                                             className='bg-[#ff033a] px-6 py-4 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-lg text-xl'
                                         >
                                             <p className='flex flex-col items-center font-normal text-2xl'>
-                                                {agency.btnText}
+                                                Смотреть направление
                                             </p>
                                         </Link>
                                     </div>

@@ -1,46 +1,52 @@
 import BottomNav from '@/app/components/BottomNav'
 import TopCoAgenciesSwiper from '@/app/components/TopCoAgenciesSwiper'
+import { getTopCountry } from '@/sanity/sanity-utils'
 import { MoveLeft } from 'lucide-react'
 import Link from 'next/link'
 
-const data = {
-    countryTitle: 'Japan',
-    flagImage: '/images/swiperData/flag4.jpg',
-    relatedAgencies: [
-        {
-            link: '/topCountries/1/1',
-            agencyName: 'Agency Name 1',
-            shortContent: 'Short content 1',
-            thumbImage: '/images/swiperData/ava1.jpg',
-        },
-        {
-            link: '/topCountries/1/1',
-            agencyName: 'Agency Name 2',
-            shortContent: 'Short content 2',
-            thumbImage: '/images/swiperData/ava2.jpg',
-        },
-        {
-            link: '/topCountries/1/1',
-            agencyName: 'Agency Name 3',
-            shortContent: 'Short content 3',
-            thumbImage: '/images/swiperData/ava3.jpg',
-        },
-        {
-            link: '/topCountries/1/1',
-            agencyName: 'Agency Name 4',
-            shortContent: 'Short content 4',
-            thumbImage: '/images/swiperData/ava4.jpg',
-        },
-        {
-            link: '/topCountries/1/1',
-            agencyName: 'Agency Name 5',
-            shortContent: 'Short content 5',
-            thumbImage: '/images/swiperData/ava5.jpg',
-        },
-    ]
-}
+// const data = {
+//     countryTitle: 'Japan',
+//     flagImage: '/images/swiperData/flag4.jpg',
+//     relatedAgencies: [
+//         {
+//             link: '/topCountries/1/1',
+//             agencyName: 'Agency Name 1',
+//             shortContent: 'Short content 1',
+//             thumbImage: '/images/swiperData/ava1.jpg',
+//         },
+//         {
+//             link: '/topCountries/1/1',
+//             agencyName: 'Agency Name 2',
+//             shortContent: 'Short content 2',
+//             thumbImage: '/images/swiperData/ava2.jpg',
+//         },
+//         {
+//             link: '/topCountries/1/1',
+//             agencyName: 'Agency Name 3',
+//             shortContent: 'Short content 3',
+//             thumbImage: '/images/swiperData/ava3.jpg',
+//         },
+//         {
+//             link: '/topCountries/1/1',
+//             agencyName: 'Agency Name 4',
+//             shortContent: 'Short content 4',
+//             thumbImage: '/images/swiperData/ava4.jpg',
+//         },
+//         {
+//             link: '/topCountries/1/1',
+//             agencyName: 'Agency Name 5',
+//             shortContent: 'Short content 5',
+//             thumbImage: '/images/swiperData/ava5.jpg',
+//         },
+//     ]
+// }
 
-export default function TopCountry() {
+type Props = { params: Promise<{ topCountryId: string }> }
+
+export default async function TopCountry(props: Props) {
+    const params = await props.params
+    const slug = params.topCountryId
+    const data = await getTopCountry(slug)
     return (
         <section className='w-full h-screen flex flex-col justify-center items-center'>
             <div className='relative w-full h-full'>
@@ -76,7 +82,6 @@ export default function TopCountry() {
                     />
                 </div>
                 <TopCoAgenciesSwiper data={data} />
-                {/* <MainSwiper data={data} /> */}
                 <p className='absolute top-3 w-full flex flex-col items-center justify-center z-20 text-center font-[600] tracking-widest text-[#ff033a] text-xl sm:text-4xl textShadow'>
                     SOPRANO ESCORT
                 </p>

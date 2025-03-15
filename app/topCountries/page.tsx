@@ -3,56 +3,11 @@ import BottomNav from '../components/BottomNav'
 import { MoveLeft, MoveRight } from 'lucide-react'
 import Link from 'next/link'
 import TopCountriesSwiper from '../components/TopCountriesSwiper'
+import { getTopCountries } from '@/sanity/sanity-utils'
 
-const data = [
-    {
-        countryTitle: '1 Country Name',
-        subTitle: 'Couintry sub title 1',
-        shortDescription: '1 Short Contect',
-        thumbImage: '/images/swiperData/ava1.jpg',
-        flagImage: '/images/swiperData/flag1.jpg',
-        link: '/topCountries/1',
-        btnText: 'Button Text'
-    },
-    {
-        countryTitle: '2 Country Name',
-        subTitle: 'Couintry sub title 2',
-        shortDescription: '2 Short Contect',
-        thumbImage: '/images/swiperData/ava2.jpg',
-        flagImage: '/images/swiperData/flag2.jpg',
-        link: '/topCountries/2',
-        btnText: 'Button Text'
-    },
-    {
-        countryTitle: '3 Country Name',
-        subTitle: 'Couintry sub title 3',
-        shortDescription: '3 Short Contect',
-        thumbImage: '/images/swiperData/ava3.jpg',
-        flagImage: '/images/swiperData/flag3.jpg',
-        link: '/topCountries/3',
-        btnText: 'Button Text'
-    },
-    {
-        countryTitle: '4 Country Name',
-        subTitle: 'Couintry sub title 4',
-        shortDescription: '4 Short Contect',
-        thumbImage: '/images/swiperData/ava4.jpg',
-        flagImage: '/images/swiperData/flag4.jpg',
-        link: '/topCountries/4',
-        btnText: 'Button Text'
-    },
-    {
-        countryTitle: '5 Country Name',
-        subTitle: 'Couintry sub title 5',
-        shortDescription: '5 Short Contect',
-        thumbImage: '/images/swiperData/ava5.jpg',
-        flagImage: '/images/swiperData/flag5.jpg',
-        link: '/topCountries/5',
-        btnText: 'Button Text'
-    },
-]
 
-export default function TopCountries() {
+export default async function TopCountries() {
+    const data = await getTopCountries()
     return (
         <section className='w-full h-screen flex flex-col justify-center items-center'>
             <div className='relative w-full h-full'>

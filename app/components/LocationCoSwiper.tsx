@@ -10,6 +10,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
+import { PortableText } from 'next-sanity'
 
 export default function LocationCoSwiper({ data }: any) {
     const [thumbsSwiper, setThumbsSwiper]: any = useState(null)
@@ -17,43 +18,89 @@ export default function LocationCoSwiper({ data }: any) {
         <div className='absolute inset-0'>
             <Swiper
                 loop={true}
+                spaceBetween={0}
+                navigation={true}
                 pagination={{
                     type: 'fraction',
                 }}
-                spaceBetween={1}
-                navigation={true}
-                thumbs={{
-                    swiper:
-                        thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
-                }}
-                modules={[FreeMode, Thumbs, Pagination, Navigation]}
+                thumbs={{ swiper: thumbsSwiper }}
+                modules={[FreeMode, Thumbs, Navigation, Pagination]}
+                className='w-full h-screen'
             >
                 {data.relatedCountries?.map((country: any, idx: any) => (
-                    <SwiperSlide
-                        key={idx}
-                        className='cursor-pointer'
-                    >
-                        <Link
-                            href={country.link}
-                        >
-                            <div className='flex flex-col justify-center items-center gap-2 bg-gradient-to-r from-transparent via-black to-transparent text-white rounded-3xl py-2 px-12 sm:px-48'>
-                                <div className='flex items-center textShadow font-normal'>
-                                    <h1 className='text-3xl md:text-6xl xl:text-7xl drop-shadow-md text-center'>
-                                        {country.locationTitle}
-                                    </h1>
-                                </div>
-                                <img
-                                    src={country.flagImage}
-                                    alt='ava_img'
-                                    className='w-28 sm:w-32 h-28 sm:h-32 object-cover bg-gradient-to-t from-purple-900 to-violet-400 p-[3px] rounded-full shadow-lg'
-                                />
-                                <ChevronDown size={32} />
+                    <SwiperSlide key={idx}>
+                        <div className='w-full h-full relative'>
+                            <div className='absolute inset-0 md:hidden flex flex-col justify-center items-center px-2 bg-gradient-to-t from-black via-white/10 to-white/10'>
+                                <Link
+                                    href={`/locations/country/${country.slug}`}
+                                    className='flex items-center rounded-full p-1 text-white gap-2 '
+                                >
+                                    <div className='flex flex-col items-center gap-2 relative'>
+                                        <div className='absolute flex items-center z-30 -top-8'>
+                                            <img
+                                                title='Vip Vacancy Agency Avatar'
+                                                className='object-cover w-16 h-16 rounded-full bg-gradient-to-t from-purple-900 to-violet-400 p-[3px]'
+                                                src={country.flagImage}
+                                                alt='Vip Vacancy Agency Avatar'
+                                                width={64}
+                                                height={64}
+                                                fetchPriority='high'
+                                                loading='eager'
+                                            />
+                                        </div>
+                                        <div className='bg-gradient-to-r from-transparent via-black to-transparent flex items-center justify-around rounded-xl py-2 w-5/6 min-w-[220px]  shadow-lg text-white'>
+                                            <div className='flex flex-col items-center gap-2 px-2 pt-8'>
+                                                <div className='flex items-center border-b-[1px] border-neutral-400'>
+                                                    <p className='text-center text-2xl font-normal w-full textShadow'>
+                                                        {country.countryTitle}
+                                                    </p>
+                                                </div>
+                                                <p className='textShadow font-normal text-md text-center'>
+                                                    <PortableText value={country.shortDescription} />
+                                                </p>
+                                                <ChevronDown size={32} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Link>
                             </div>
-                        </Link>
+                            <div className='absolute w-full h-full left-0 bottom-0 md:top-0 hidden md:flex flex-col justify-center items-center md:items-start text-white md:pl-24'>
+                                <div className='w-full md:w-1/2 xl:w-1/3 flex flex-col justify-center items-center md:items-start text-center font-bold  md:text-start gap-4 mb-8 md:mb-0'>
+                                    <div className='flex flex-row items-end gap-4'>
+                                        <h1 className='text-5xl md:text-8xl textShadow font-normal'>
+                                            {country.countryTitle}
+                                        </h1>
+                                        <img
+                                            title='Vip Vacancy Agency Avatar'
+                                            className='object-cover w-16 h-16 rounded-full bg-gradient-to-t from-purple-900 to-violet-400 p-[3px] mb-1'
+                                            src={country.flagImage}
+                                            alt='Vip Vacancy Agency Avatar'
+                                            width={64}
+                                            height={64}
+                                            fetchPriority='high'
+                                            loading='eager'
+                                        />
+                                    </div>
+                                    <h2 className='text-2xl textShadow font-normal hidden md:block'>
+                                        <PortableText value={country.shortDescription} />
+                                    </h2>
+                                    <div className='w-3/4 xl:w-2/3 flex flex-col justify-start items-center gap-4'>
+                                        <Link
+                                            href={`/locations/country/${country.slug}`}
+                                            className='bg-[#ff033a] px-6 py-4 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-lg text-xl'
+                                        >
+                                            <p className='flex flex-col items-center font-normal text-2xl'>
+                                                Смотреть
+                                            </p>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <div className='absolute md:right-24 bottom-0 md:bottom-12 w-full md:w-1/2 xl:w-1/3 h-fit z-30 px-2'>
+            <div className='absolute md:right-24 bottom-6 md:bottom-24 w-full md:w-1/2 xl:w-1/3 h-fit z-30'>
                 <Swiper
                     onSwiper={setThumbsSwiper}
                     loop={true}
@@ -62,32 +109,38 @@ export default function LocationCoSwiper({ data }: any) {
                     freeMode={true}
                     watchSlidesProgress={true}
                     modules={[FreeMode, Thumbs]}
-                    className='thumbs w-full md:w-[560px] sm:w-[400px] h-fit cursor-pointer z-30 bottom-2 rounded-xl'
+                    className='thumbs w-full md:w-[560px] sm:w-[400px] h-fit cursor-pointer z-30'
                 >
                     {data.relatedCountries?.map((country: any, idx: any) => (
                         <SwiperSlide key={idx}>
                             <div className='w-full h-full flex flex-col items-center justify-center gap-2'>
                                 <div className='bg-gradient-to-t from-purple-900 to-violet-400 rounded-full p-[3px] relative'>
                                     <img
+                                        title='Agency Thumb Avatar'
                                         className='object-cover w-20 h-20 rounded-full border-2 md:border-4 border-black md:h-32 md:w-32 shadow-lg'
                                         src={country.thumbImage}
-                                        alt='topCountry_img'
+                                        alt='Agency Thumb Avatar'
+                                        width={86}
+                                        height={86}
                                         fetchPriority='high'
                                         loading='eager'
                                     />
                                     <div className='absolute inset-0 text-sm flex flex-col items-center justify-end pb-2 sm:pb-3'>
                                         <img
-                                            className='object-cover w-8 md:w-10 h-8 md:h-10 shadow-md rounded-full'
+                                            title='inside img flag or ava'
+                                            className='object-cover w-8 h-8 bg-black rounded-full shadow-md'
                                             src={country.flagImage}
-                                            alt='topCountry_img'
+                                            alt='inside img flag or ava'
+                                            width={32}
+                                            height={32}
                                             fetchPriority='high'
                                             loading='eager'
                                         />
                                     </div>
                                 </div>
-                                <p className='text-center font-bold text-sm md:text-xl textShadow text-white'>
-                                    {country.countryTitle}
-                                </p>
+                                <div className='flex flex-col justify-center items-center text-center font-semibold text-sm md:text-lg text-white drop-shadow-md'>
+                                    <p>{country.countryTitle}</p>
+                                </div>
                             </div>
                         </SwiperSlide>
                     ))}

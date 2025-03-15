@@ -27,7 +27,7 @@ export default function TopCoAgenciesSwiper({ data }: any) {
                         <div className='w-full h-full relative'>
                             <div className='absolute inset-0 md:hidden flex flex-col justify-center items-center px-2 bg-gradient-to-t from-black via-white/10 to-white/10'>
                                 <Link
-                                    href={agency.link}
+                                    href={`/topCountries/agency/${agency.slug}`}
                                     className='flex items-center rounded-full p-1 text-white gap-2'
                                 >
                                     <div className='flex flex-col items-center gap-2 relative'>
@@ -69,7 +69,7 @@ export default function TopCoAgenciesSwiper({ data }: any) {
                                     </h2>
                                     <div className='w-3/4 xl:w-2/3 flex flex-col justify-start items-center gap-4'>
                                         <Link
-                                            href={agency.link}
+                                            href={`/topCountries/agency/${agency.slug}`}
                                             className='bg-[#ff033a] px-6 py-4 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-lg text-xl'
                                         >
                                             <p className='flex flex-col items-center font-normal text-2xl'>
@@ -99,10 +99,10 @@ export default function TopCoAgenciesSwiper({ data }: any) {
                             <div className='w-full h-full flex flex-col items-center justify-center gap-2'>
                                 <div className='bg-gradient-to-t from-violet-600 to-sky-400 rounded-full p-[3px] relative'>
                                     <img
-                                        title='Agency Thumb Avatar'
+                                        title='Агентства Топ Страны'
                                         className='object-cover w-20 h-20 rounded-full border-2 md:border-4 border-black md:h-32 md:w-32 shadow-lg'
                                         src={agency.thumbImage}
-                                        alt='Agency Thumb Avatar'
+                                        alt='Агентства Топ Страны'
                                         width={86}
                                         height={86}
                                         fetchPriority='high'

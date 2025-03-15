@@ -1,12 +1,12 @@
 import React from 'react'
 import BottomNav from '../components/BottomNav'
-import MainSwiper from '../components/Swiper'
 import Link from 'next/link'
 import { MoveLeft, MoveRight } from 'lucide-react'
+import GroupsSwiper from '../components/GroupsSwiper'
 
 const data = [
     {
-        agencyName: 'Группы',
+        title: 'Группы',
         shortContent: 'Высокооплачиваемая работа моделью от агентства SOPRANO ESCORT',
         thumbImage: '/images/swiperData/ava1.jpg',
         innerImg: '/images/swiperData/flag1.jpg',
@@ -14,7 +14,7 @@ const data = [
         btnText: 'Перейти в группы'
     },
     {
-        agencyName: 'Отзывы',
+        title: 'Отзывы',
         shortContent: 'Отзывы девушек от работы в эскорте за границей',
         thumbImage: '/images/swiperData/ava2.jpg',
         innerImg: '/images/swiperData/flag2.jpg',
@@ -22,7 +22,7 @@ const data = [
         btnText: 'Смотреть отзывы'
     },
     {
-        agencyName: 'Условия',
+        title: 'Условия',
         shortContent: 'Условия работы девушек в эскорте за границей',
         thumbImage: '/images/swiperData/ava3.jpg',
         innerImg: '/images/swiperData/flag3.jpg',
@@ -55,7 +55,8 @@ export default function Groups() {
                         type='video/mp4'
                     ></source>
                 </video>
-                <MainSwiper data={data} />
+                <GroupsSwiper data={data} />
+                {/* <MainSwiper data={data} /> */}
                 <p className='absolute top-3 w-full flex flex-col items-center justify-center z-20 text-center font-[600] tracking-widest text-[#ff033a] text-xl sm:text-4xl logo logoShadow'>
                     SOPRANO ESCORT
                 </p>

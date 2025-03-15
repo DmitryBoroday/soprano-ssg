@@ -3,51 +3,11 @@ import BottomNav from '../components/BottomNav'
 import Link from 'next/link'
 import { MoveLeft, MoveRight } from 'lucide-react'
 import LocationsSwiper from '../components/LocationsSwiper'
+import { getLocations } from '@/sanity/sanity-utils'
 
-const data = [
-    {
-        locationTitle: '1 Country Name',
-        shortDescription: '1 Short Contect',
-        thumbImage: '/images/swiperData/ava1.jpg',
-        locationFlagImage: '/images/swiperData/flag1.jpg',
-        link: '/locations/1',
-        btnText: 'Button Text'
-    },
-    {
-        locationTitle: '2 Country Name',
-        shortDescription: '2 Short Contect',
-        thumbImage: '/images/swiperData/ava2.jpg',
-        locationFlagImage: '/images/swiperData/flag2.jpg',
-        link: '/locations/2',
-        btnText: 'Button Text'
-    },
-    {
-        locationTitle: '3 Country Name',
-        shortDescription: '3 Short Contect',
-        thumbImage: '/images/swiperData/ava3.jpg',
-        locationFlagImage: '/images/swiperData/flag3.jpg',
-        link: '/locations/3',
-        btnText: 'Button Text'
-    },
-    {
-        locationTitle: '4 Country Name',
-        shortDescription: '4 Short Contect',
-        thumbImage: '/images/swiperData/ava4.jpg',
-        locationFlagImage: '/images/swiperData/flag4.jpg',
-        link: '/locations/4',
-        btnText: 'Button Text'
-    },
-    {
-        locationTitle: '5 Agency Name',
-        shortDescription: '5 Short Contect',
-        thumbImage: '/images/swiperData/ava5.jpg',
-        locationFlagImage: '/images/swiperData/flag5.jpg',
-        link: '/locations/5',
-        btnText: 'Button Text'
-    },
-]
 
-export default function Locations() {
+export default async function Locations() {
+    const data = await getLocations()
     return (
         <section className='w-full h-screen flex flex-col justify-center items-center'>
             <div className='relative w-full h-full'>
@@ -72,7 +32,6 @@ export default function Locations() {
                     ></source>
                 </video>
                 <LocationsSwiper data={data} />
-                {/* <MainSwiper data={data} /> */}
                 <p className='absolute top-3 w-full flex flex-col items-center justify-center z-20 text-center font-[600] tracking-widest text-[#ff033a] text-xl sm:text-4xl logo logoShadow'>
                     SOPRANO ESCORT
                 </p>
@@ -86,9 +45,9 @@ export default function Locations() {
                         width={48}
                         height={48}
                     />
-                    <h1 className='text-center text-white font-bold tracking-[2px] text-sm drop-shadow-md'>
+                    <p className='text-center text-white font-bold tracking-[2px] text-sm drop-shadow-md'>
                         Весь мир
-                    </h1>
+                    </p>
                 </div>
             </div>
             <Link

@@ -1,47 +1,14 @@
 import Link from 'next/link'
 import BottomNav from '../components/BottomNav'
-import MainSwiper from '../components/Swiper'
 import { MoveLeft, MoveRight } from 'lucide-react'
+import { getVipVacancies } from '@/sanity/sanity-utils'
+import VipAgencySwiper from '../components/VipAgencySwiper'
 
-const data = [
-    {
-        vipAgencyName: '1 Agency Name',
-        shortContent: '1 Short Contect',
-        thumbImage: '/images/swiperData/ava1.jpg',
-        link: '/vipVacancies/1',
-        btnText: 'Button Text'
-    },
-    {
-        vipAgencyName: '2 Agency Name',
-        shortContent: '2 Short Contect',
-        thumbImage: '/images/swiperData/ava2.jpg',
-        link: '/vipVacancies/2',
-        btnText: 'Button Text'
-    },
-    {
-        vipAgencyName: '3 Agency Name',
-        shortContent: '3 Short Contect',
-        thumbImage: '/images/swiperData/ava3.jpg',
-        link: '/vipVacancies/3',
-        btnText: 'Button Text'
-    },
-    {
-        vipAgencyName: '4 Agency Name',
-        shortContent: '4 Short Contect',
-        thumbImage: '/images/swiperData/ava4.jpg',
-        link: '/vipVacancies/4',
-        btnText: 'Button Text'
-    },
-    {
-        vipAgencyName: '5 Agency Name',
-        shortContent: '5 Short Contect',
-        thumbImage: '/images/swiperData/ava5.jpg',
-        link: '/vipVacancies/5',
-        btnText: 'Button Text'
-    },
-]
 
-export default function VipVacancies() {
+export default async function VipVacancies() {
+
+    const data = await getVipVacancies()
+
     return (
         <section className='w-full h-screen flex flex-col justify-center items-center'>
             <div className='relative w-full h-full'>
@@ -65,7 +32,7 @@ export default function VipVacancies() {
                         type='video/mp4'
                     ></source>
                 </video>
-                <MainSwiper data={data} />
+                <VipAgencySwiper data={data} />
                 <p className='absolute top-3 w-full flex flex-col items-center justify-center z-20 text-center font-[600] tracking-widest text-[#ff033a] text-xl sm:text-4xl logo logoShadow'>
                     SOPRANO ESCORT
                 </p>

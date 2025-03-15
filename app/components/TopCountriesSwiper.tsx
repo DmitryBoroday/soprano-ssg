@@ -9,6 +9,7 @@ import 'swiper/css/thumbs'
 import 'swiper/css/navigation'
 import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
+import { PortableText } from 'next-sanity'
 
 export default function TopCountriesSwiper({ data }: any) {
     const [thumbsSwiper, setThumbsSwiper]: any = useState(null)
@@ -27,7 +28,7 @@ export default function TopCountriesSwiper({ data }: any) {
                         <div className='w-full h-full relative'>
                             <div className='absolute inset-0 md:hidden flex flex-col justify-center items-center px-2 bg-gradient-to-t from-black via-white/10 to-white/10'>
                                 <Link
-                                    href={country.link}
+                                    href={`/topCountries/${country.slug}`}
                                     className='flex items-center rounded-full p-1 text-white gap-2'
                                 >
                                     <div className='flex flex-col items-center gap-2 relative'>
@@ -76,19 +77,19 @@ export default function TopCountriesSwiper({ data }: any) {
                                             {country.countryTitle}
                                         </p>
                                     </div>
-                                    <p className='text-5xl md:text-8xl textShadow font-normal'>
+                                    <p className='text-5xl md:text-7xl textShadow font-normal'>
                                         {country.subTitle}
                                     </p>
-                                    <p className='text-2xl textShadow font-normal hidden md:block'>
-                                        {country.shortDescription}
-                                    </p>
+                                    <article className='text-2xl textShadow font-normal hidden md:block'>
+                                        <PortableText value={country.shortDescription} />
+                                    </article>
                                     <div className='w-3/4 xl:w-2/3 flex flex-col justify-start items-center gap-4'>
                                         <Link
-                                            href={country.link}
+                                            href={`/topCountries/${country.slug}`}
                                             className='bg-[#ff033a] px-6 py-4 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-lg text-xl'
                                         >
                                             <p className='flex flex-col items-center font-normal text-2xl'>
-                                                Button text
+                                                Смотреть агентства
                                             </p>
                                         </Link>
                                     </div>

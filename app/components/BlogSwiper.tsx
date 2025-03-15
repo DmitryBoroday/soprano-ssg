@@ -9,10 +9,10 @@ import 'swiper/css/thumbs'
 import 'swiper/css/navigation'
 import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
+import { PortableText } from 'next-sanity'
 
 
-
-export default function MainSwiper({ data }: any) {
+export default function BlogSwiper({ data }: any) {
     const [thumbsSwiper, setThumbsSwiper]: any = useState(null)
     return (
         <div className='absolute inset-0'>
@@ -24,12 +24,12 @@ export default function MainSwiper({ data }: any) {
                 modules={[FreeMode, Thumbs, Navigation]}
                 className='w-full h-screen'
             >
-                {data.map((agency: any, idx: any) => (
+                {data.map((category: any, idx: any) => (
                     <SwiperSlide key={idx}>
                         <div className='w-full h-full relative'>
                             <div className='absolute inset-0 md:hidden flex flex-col justify-center items-center px-2 bg-gradient-to-t from-black via-white/10 to-white/10'>
                                 <Link
-                                    href={agency.link}
+                                    href={`/blogs/${category.slug}`}
                                     className='flex items-center rounded-full p-1 text-white gap-2 '
                                 >
                                     <div className='flex flex-col items-center gap-2 relative'>
@@ -37,7 +37,7 @@ export default function MainSwiper({ data }: any) {
                                             <img
                                                 title='Vip Vacancy Agency Avatar'
                                                 className='object-cover w-16 h-16 rounded-full bg-gradient-to-t from-red-600 to-rose-400 p-[3px]'
-                                                src={agency.thumbImage}
+                                                src={category.avatarImage}
                                                 alt='Vip Vacancy Agency Avatar'
                                                 width={64}
                                                 height={64}
@@ -49,12 +49,12 @@ export default function MainSwiper({ data }: any) {
                                             <div className='flex flex-col items-center gap-2 px-2 pt-8'>
                                                 <div className='flex items-center border-b-[1px] border-neutral-400'>
                                                     <p className='text-center text-2xl font-normal w-full textShadow'>
-                                                        {agency.vipAgencyName}
+                                                        {category.categoryTitle}
                                                     </p>
                                                 </div>
-                                                <p className='textShadow font-normal text-md text-center'>
-                                                    {agency.shortContent}
-                                                </p>
+                                                <article className='textShadow font-normal text-md text-center'>
+                                                    <PortableText value={category.shortDescription} />
+                                                </article>
                                                 <ChevronDown size={32} />
                                             </div>
                                         </div>
@@ -63,19 +63,19 @@ export default function MainSwiper({ data }: any) {
                             </div>
                             <div className='absolute w-full h-full left-0 bottom-0 md:top-0 hidden md:flex flex-col justify-center items-center md:items-start text-white md:pl-24'>
                                 <div className='w-full md:w-1/2 xl:w-1/3 flex flex-col justify-center items-center md:items-start text-center font-bold  md:text-start gap-4 mb-8 md:mb-0'>
-                                    <h1 className='text-5xl md:text-8xl textShadow font-normal'>
-                                        {agency.vipAgencyName}
-                                    </h1>
-                                    <h2 className='text-2xl textShadow font-normal hidden md:block'>
-                                        {agency.shortContent}
-                                    </h2>
+                                    <p className='text-5xl md:text-8xl textShadow font-normal'>
+                                        {category.categoryTitle}
+                                    </p>
+                                    <article className='text-2xl textShadow font-normal hidden md:block'>
+                                        <PortableText value={category.shortDescription} />
+                                    </article>
                                     <div className='w-3/4 xl:w-2/3 flex flex-col justify-start items-center gap-4'>
                                         <Link
-                                            href={agency.link}
+                                            href={`/blogs/${category.slug}`}
                                             className='bg-[#ff033a] px-6 py-4 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-lg text-xl'
                                         >
                                             <p className='flex flex-col items-center font-normal text-2xl'>
-                                                {agency.btnText}
+                                                Смотреть раздел
                                             </p>
                                         </Link>
                                     </div>
@@ -96,35 +96,23 @@ export default function MainSwiper({ data }: any) {
                     modules={[FreeMode, Thumbs]}
                     className='thumbs w-full md:w-[560px] sm:w-[400px] h-fit cursor-pointer z-30'
                 >
-                    {data.map((agency: any, idx: any) => (
+                    {data.map((category: any, idx: any) => (
                         <SwiperSlide key={idx}>
                             <div className='w-full h-full flex flex-col items-center justify-center gap-2'>
                                 <div className='bg-gradient-to-t from-red-600 to-rose-400 rounded-full p-[3px] relative'>
                                     <img
                                         title='Agency Thumb Avatar'
                                         className='object-cover w-20 h-20 rounded-full border-2 md:border-4 border-black md:h-32 md:w-32 shadow-lg'
-                                        src={agency.thumbImage}
+                                        src={category.avatarImage}
                                         alt='Agency Thumb Avatar'
                                         width={86}
                                         height={86}
                                         fetchPriority='high'
                                         loading='eager'
                                     />
-                                    <div className='absolute inset-0 text-sm flex flex-col items-center justify-end pb-2 sm:pb-3'>
-                                        <img
-                                            title='inside img flag or ava'
-                                            className='object-cover w-8 h-8 bg-black rounded-full shadow-md'
-                                            src='/images/vipVacancies/vipSm.avif'
-                                            alt='inside img flag or ava'
-                                            width={32}
-                                            height={32}
-                                            fetchPriority='high'
-                                            loading='eager'
-                                        />
-                                    </div>
                                 </div>
                                 <div className='flex flex-col justify-center items-center text-center font-semibold text-sm md:text-lg text-white drop-shadow-md'>
-                                    <p>{agency.vipAgencyName}</p>
+                                    <p>{category.categoryTitle}</p>
                                 </div>
                             </div>
                         </SwiperSlide>

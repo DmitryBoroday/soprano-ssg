@@ -1,55 +1,25 @@
 import Link from 'next/link'
 import BottomNav from '../components/BottomNav'
-import MainSwiper from '../components/Swiper'
-import { MoveLeft, MoveRight } from 'lucide-react'
-
-const data = [
-    {
-        agencyName: '1 Agency Name',
-        shortContent: '1 Short Contect',
-        thumbImage: '/images/swiperData/ava1.jpg',
-        innerImg: '/images/swiperData/flag1.jpg',
-        link: '/blogs/1',
-        btnText: 'Button Text'
-    },
-    {
-        agencyName: '2 Agency Name',
-        shortContent: '2 Short Contect',
-        thumbImage: '/images/swiperData/ava2.jpg',
-        innerImg: '/images/swiperData/flag2.jpg',
-        link: '/blogs/2',
-        btnText: 'Button Text'
-    },
-    {
-        agencyName: '3 Agency Name',
-        shortContent: '3 Short Contect',
-        thumbImage: '/images/swiperData/ava3.jpg',
-        innerImg: '/images/swiperData/flag3.jpg',
-        link: '/blogs/3',
-        btnText: 'Button Text'
-    },
-    {
-        agencyName: '4 Agency Name',
-        shortContent: '4 Short Contect',
-        thumbImage: '/images/swiperData/ava4.jpg',
-        innerImg: '/images/swiperData/flag4.jpg',
-        link: '/blogs/4',
-        btnText: 'Button Text'
-    },
-    {
-        agencyName: '5 Agency Name',
-        shortContent: '5 Short Contect',
-        thumbImage: '/images/swiperData/ava5.jpg',
-        innerImg: '/images/swiperData/flag5.jpg',
-        link: '/blogs/5',
-        btnText: 'Button Text'
-    },
-]
+import { ArrowRight, MoveLeft, MoveRight } from 'lucide-react'
+import BlogSwiper from '../components/BlogSwiper'
+import { getBlogTopics } from '@/sanity/sanity-utils'
 
 
-export default function Blogs() {
+export default async function Blogs() {
+    const data = await getBlogTopics()
     return (
         <section className='w-full h-screen flex flex-col justify-center items-center'>
+            <Link href={'/blogs'} className='fixed top-28 sm:top-32 right-4 p-1 rounded-full z-30 flex items-center gap-2 bg-green-300'>
+                <img
+                    title='Статья дня'
+                    className='object-cover w-12 sm:w-14 h-12 sm:h-14 bg-gradient-to-t from-rose-600 to-rose-400 p-[2px] rounded-full'
+                    src={'img'}
+                    alt='Статья дня'
+                    fetchPriority='high'
+                    loading='eager'
+                />
+                <p className='flex items-center'>Daily Title<span><ArrowRight /></span></p>
+            </Link>
             <div className='relative w-full h-full'>
                 <video
                     className='bg-black w-full h-full object-cover'
@@ -71,7 +41,7 @@ export default function Blogs() {
                         type='video/mp4'
                     ></source>
                 </video>
-                <MainSwiper data={data} />
+                <BlogSwiper data={data} />
                 <p className='absolute top-3 w-full flex flex-col items-center justify-center z-20 text-center font-[600] tracking-widest text-[#ff033a] text-xl sm:text-4xl logo logoShadow'>
                     SOPRANO ESCORT
                 </p>
