@@ -1,3 +1,4 @@
+import Link from 'next/link';
 
 
 export default function Footer() {
@@ -17,7 +18,7 @@ export default function Footer() {
                 </p>
             </div>
             <div className='text-[8px] text-white border-t-[1px] border-neutral-800 py-2'>
-                <p>Site created by Digital Orca @ 2024</p>
+                <p>Site created by <span><Link target='blank' href={'https://ssg-bio.vercel.app/'}>Digital Orca</Link></span> @ 2024</p>
             </div>
         </footer>
     )

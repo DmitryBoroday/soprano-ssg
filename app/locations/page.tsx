@@ -31,6 +31,7 @@ export default async function Locations() {
                         type='video/mp4'
                     ></source>
                 </video>
+                <div className='absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-black via-transparent to-transparent'></div>
                 <LocationsSwiper data={data} />
                 <p className='absolute top-3 w-full flex flex-col items-center justify-center z-20 text-center font-[600] tracking-widest text-[#ff033a] text-xl sm:text-4xl logo logoShadow'>
                     SOPRANO ESCORT
@@ -45,7 +46,7 @@ export default async function Locations() {
                         width={48}
                         height={48}
                     />
-                    <p className='text-center text-white font-bold tracking-[2px] text-sm drop-shadow-md'>
+                    <p className='text-center text-white font-bold text-sm drop-shadow-md'>
                         Весь мир
                     </p>
                 </div>

@@ -5,6 +5,7 @@ export type Locations = {
     _createdAt: Date,
     slug: string,
     locationTitle: string,
+    locationSubTitle: string,
     locationFlagImage: string,
     desktopImage: string,
     mobileImage: string,

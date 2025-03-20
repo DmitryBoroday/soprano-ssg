@@ -9,7 +9,7 @@ export default async function Blogs() {
     const data = await getBlogTopics()
     return (
         <section className='w-full h-screen flex flex-col justify-center items-center'>
-            <Link href={'/blogs'} className='fixed top-28 sm:top-32 right-4 p-1 rounded-full z-30 flex items-center gap-2 bg-green-300'>
+            {/* <Link href={'/blogs'} className='fixed top-28 sm:top-32 right-4 p-1 rounded-full z-30 flex items-center gap-2 bg-green-300'>
                 <img
                     title='Статья дня'
                     className='object-cover w-12 sm:w-14 h-12 sm:h-14 bg-gradient-to-t from-rose-600 to-rose-400 p-[2px] rounded-full'
@@ -19,7 +19,7 @@ export default async function Blogs() {
                     loading='eager'
                 />
                 <p className='flex items-center'>Daily Title<span><ArrowRight /></span></p>
-            </Link>
+            </Link> */}
             <div className='relative w-full h-full'>
                 <video
                     className='bg-black w-full h-full object-cover'

@@ -18,9 +18,8 @@ export async function getVipVacancies(): Promise<VipAgency> {
             _createdAt,
              vipAgencyName,
              'slug': slug.current,
-             'mobileImage': mobileImage.asset->url,
-             'desktopImage': desktopImage.asset->url,
              'thumbImage': thumbImage.asset->url,
+             'thumbFlag': thumbFlag.asset->url,
              shortContent,
          }`
     )
@@ -189,6 +188,7 @@ export async function getLocations(): Promise<Locations[]> {
             _id,
             _createdAt,
              locationTitle,
+             locationSubTitle,
              shortDescription,
              'slug': slug.current,
              'thumbImage': thumbImage.asset->url,
@@ -250,3 +250,4 @@ export async function getCountryAgencies(slug: string): Promise<CountryAgencies>
          }`, { slug }
     )
 }
+

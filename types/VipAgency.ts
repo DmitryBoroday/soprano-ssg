@@ -18,6 +18,7 @@ export type VipAgency = {
     desktopImage: string,
     mobileImage: string,
     thumbImage: string,
+    thumbFlag: string,
     date: string,
     telegramUrl: string,
     whatsappUrl: string,

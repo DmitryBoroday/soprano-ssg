@@ -9,7 +9,6 @@ import 'swiper/css/thumbs'
 import 'swiper/css/navigation'
 import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
-import { PortableText } from 'next-sanity'
 
 export default function LocationsSwiper({ data }: any) {
     const [thumbsSwiper, setThumbsSwiper]: any = useState(null)
@@ -26,7 +25,7 @@ export default function LocationsSwiper({ data }: any) {
                 {data.map((location: any, idx: any) => (
                     <SwiperSlide key={idx}>
                         <div className='w-full h-full relative'>
-                            <div className='absolute inset-0 md:hidden flex flex-col justify-center items-center px-2 bg-gradient-to-t from-black via-white/10 to-white/10'>
+                            <div className='absolute inset-0 md:hidden flex flex-col justify-center items-center'>
                                 <Link
                                     href={`/locations/${location.slug}`}
                                     className='flex items-center rounded-full p-1 text-white gap-2'
@@ -52,7 +51,7 @@ export default function LocationsSwiper({ data }: any) {
                                                     </h1>
                                                 </div>
                                                 <h2 className='textShadow font-normal text-md text-center'>
-                                                    <PortableText value={location.shortDescription} />
+                                                    {location.locationSubTitle}
                                                 </h2>
                                                 <ChevronDown size={32} />
                                             </div>
@@ -66,7 +65,7 @@ export default function LocationsSwiper({ data }: any) {
                                         {location.locationTitle}
                                     </h1>
                                     <h2 className='text-2xl textShadow font-normal hidden md:block'>
-                                        <PortableText value={location.shortDescription} />
+                                        {location.locationSubTitle}
                                     </h2>
                                     <div className='w-3/4 xl:w-2/3 flex flex-col justify-start items-center gap-4'>
                                         <Link
@@ -109,12 +108,12 @@ export default function LocationsSwiper({ data }: any) {
                                         fetchPriority='high'
                                         loading='eager'
                                     />
-                                    <div className='absolute inset-0 text-sm flex flex-col items-center justify-end pb-2 sm:pb-3'>
+                                    <div className='absolute inset-0 text-sm flex flex-col items-center justify-end pb-3'>
                                         <img
-                                            title='inside img flag or ava'
-                                            className='object-cover w-8 h-8 bg-black rounded-full shadow-md'
+                                            title='Флаг направления'
+                                            className='object-cover w-8 sm:w-10 h-4 sm:h-6 bg-black rounded-sm sm:rounded-md shadow-md'
                                             src={agency.locationFlagImage}
-                                            alt='inside img flag or ava'
+                                            alt='Флаг направления'
                                             width={32}
                                             height={32}
                                             fetchPriority='high'

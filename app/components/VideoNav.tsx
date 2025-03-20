@@ -32,7 +32,7 @@ const data = [
         desktopVideo: '/videos/videoNav/deskWorld.mp4',
         verticalVideo: '/videos/videoNav/mobWorld.mp4',
         avaImage: '/images/ava/ava3.avif',
-        title: 'НАПРАВЛЕНИЯ',
+        title: 'ВЕСЬ МИР',
         shortText: 'Высокооплачиваемая работа девушек в эскорте Европы, Азии, России, Америки, Африки и даже Австралии',
         buttonText: 'Выбрать направление',
         link: '/locations',

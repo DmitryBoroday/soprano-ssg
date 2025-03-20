@@ -19,29 +19,17 @@ const locationCountries = {
       title: 'Location Flag Image',
       type: 'image',
     },
-    {
-      name: 'desktopImage',
-      title: 'Desktop Image',
-      type: 'image',
-      options: {hotspot: true},
-    },
-    {
-      name: 'mobileImage',
-      title: 'Mobile Image',
-      type: 'image',
-      options: {hotspot: true},
-    },
+   
     {
       name: 'thumbImage',
       title: 'Thumb Image',
       type: 'image',
       options: {hotspot: true},
     },
-    {
-      name: 'shortDescription',
-      title: 'Short Description',
-      type: 'array',
-      of: [{type: 'block'}],
+      {
+      name: 'locationSubTitle',
+      title: 'Location Subtitle',
+      type: 'string',
     },
     {
       name: 'mainDescription',

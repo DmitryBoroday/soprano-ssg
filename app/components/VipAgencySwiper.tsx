@@ -110,12 +110,12 @@ export default function VipAgencySwiper({ data }: any) {
                                         fetchPriority='high'
                                         loading='eager'
                                     />
-                                    <div className='absolute inset-0 text-sm flex flex-col items-center justify-end pb-2 sm:pb-3'>
+                                    <div className='absolute inset-0 text-sm flex flex-col items-center justify-end pb-3'>
                                         <img
-                                            title='inside img flag or ava'
-                                            className='object-cover w-8 h-8 bg-black rounded-full shadow-md'
-                                            src='/images/vipVacancies/vipSm.avif'
-                                            alt='inside img flag or ava'
+                                            title='Флаг вип агентства'
+                                            className='object-cover w-8 sm:w-10 h-4 sm:h-6 bg-black rounded-sm sm:rounded-md shadow-md'
+                                            src={agency.thumbFlag}
+                                            alt='Флаг вип агентства'
                                             width={32}
                                             height={32}
                                             fetchPriority='high'

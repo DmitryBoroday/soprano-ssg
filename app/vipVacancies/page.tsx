@@ -33,7 +33,7 @@ export default async function VipVacancies() {
                     ></source>
                 </video>
                 <VipAgencySwiper data={data} />
-                <p className='absolute top-3 w-full flex flex-col items-center justify-center z-20 text-center font-[600] tracking-widest text-[#ff033a] text-xl sm:text-4xl logo logoShadow'>
+                <p className='absolute top-3 w-full flex flex-col items-center justify-center z-20 text-center font-[600] tracking-widest text-[#ff033a] text-xl sm:text-4xl'>
                     SOPRANO ESCORT
                 </p>
                 <div className='fixed top-20 sm:top-32 right-2 sm:right-12'>

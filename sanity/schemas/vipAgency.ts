@@ -49,6 +49,12 @@ const vipAgency = {
       type: 'image',
       options: {hotspot: true},
     },
+     {
+      name: 'thumbFlag',
+      title: 'Thumbnail Flag',
+      type: 'image',
+      options: {hotspot: true},
+    },
     {
       name: 'telegramUrl',
       title: 'Link Telegram URL',
