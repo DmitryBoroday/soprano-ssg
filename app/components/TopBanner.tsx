@@ -1,5 +1,5 @@
-import { ChevronRight } from 'lucide-react';
-import Link from 'next/link';
+import { ChevronRight } from 'lucide-react'
+import Link from 'next/link'
 
 
 export default function TopBanner() {
@@ -28,11 +28,11 @@ export default function TopBanner() {
                         ></source>
                     </video>
                 </div>
-                <article className='w-full flex flex-col gap-2 xl:gap-4 text-center xl:text-start sm:w-2/3 xl:w-1/3 px-2 text-white font-normal'>
+                <article className='w-full flex flex-col items-center sm:items-start gap-2 xl:gap-4 text-center xl:text-start sm:w-2/3 xl:w-1/3 px-2 text-white font-normal'>
                     <p className='text-sm'>SOPRANO ESCORT</p>
                     <p className='text-4xl sm:text-5xl'>ТОП СТРАНЫ</p>
                     <p className='text-lg'>Каждое эскорт-агентство проходит проверку на наличие в черном списке и отбираются только топовые, что бы предоставить самые лучшие условия работы девушек за границей</p>
-                    <nav className='w-5/6 hidden xl:block'>
+                    <nav className='w-5/6 '>
                         <Link
                             href='/topCountries'
                             className='bg-[#ff033a] px-2 py-4 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-lg text-xl flex justify-center items-center font-bold'
@@ -42,15 +42,6 @@ export default function TopBanner() {
                         </Link>
                     </nav>
                 </article>
-                <nav className='xl:hidden font-bold text-white'>
-                    <Link
-                        href='/topCountries'
-                        className='bg-[#ff033a] px-6 py-4 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-lg text-xl flex justify-center items-center'
-                    >
-                        <p>Топ страны</p>
-                        <ChevronRight size={28} />
-                    </Link>
-                </nav>
             </div>
         </section>
     )

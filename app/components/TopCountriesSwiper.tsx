@@ -8,7 +8,6 @@ import 'swiper/css/free-mode'
 import 'swiper/css/thumbs'
 import 'swiper/css/navigation'
 import Link from 'next/link'
-import { ChevronDown } from 'lucide-react'
 import { PortableText } from 'next-sanity'
 
 export default function TopCountriesSwiper({ data }: any) {
@@ -26,7 +25,7 @@ export default function TopCountriesSwiper({ data }: any) {
                 {data.map((country: any, idx: any) => (
                     <SwiperSlide key={idx}>
                         <div className='w-full h-full relative'>
-                            <div className='absolute inset-0 md:hidden flex flex-col justify-center items-center px-2 bg-gradient-to-t from-black via-white/10 to-white/10'>
+                            {/* <div className='absolute inset-0 md:hidden flex flex-col justify-center items-center px-2 bg-gradient-to-t from-black via-white/10 to-white/10'>
                                 <Link
                                     href={`/topCountries/${country.slug}`}
                                     className='flex items-center rounded-full p-1 text-white gap-2'
@@ -59,10 +58,10 @@ export default function TopCountriesSwiper({ data }: any) {
                                         </div>
                                     </div>
                                 </Link>
-                            </div>
-                            <div className='absolute w-full h-full left-0 bottom-0 md:top-0 hidden md:flex flex-col justify-center items-center md:items-start text-white md:pl-24'>
-                                <div className='w-full md:w-1/2 xl:w-1/3 flex flex-col justify-center items-center md:items-start text-center font-bold  md:text-start gap-4 mb-8 md:mb-0'>
-                                    <div className='flex items-center'>
+                            </div> */}
+                            <div className='absolute w-full h-full left-0 bottom-0 md:top-0 flex flex-col justify-center items-center md:items-start md:pl-24'>
+                                <div className='w-3/4 md:w-1/2 xl:w-1/3 flex flex-col justify-center items-center md:items-start text-center font-bold  md:text-start gap-2 sm:gap-4 mb-8 md:mb-0 bg-white/20 backdrop-blur-sm sm:backdrop-blur-none sm:bg-transparent border-[1px] sm:border-none text-white rounded-3xl py-2'>
+                                    <div className='relative flex flex-col sm:flex-row items-center justify-center text-center'>
                                         <img
                                             title='Флаг страны'
                                             className='object-cover w-12 h-12 mb-1 rounded-full shadow-lg'
@@ -73,22 +72,22 @@ export default function TopCountriesSwiper({ data }: any) {
                                             fetchPriority='high'
                                             loading='eager'
                                         />
-                                        <p className='pl-2 text-white font-normal text-2xl drop-shadow-md'>
+                                        <p className='sm:pl-2 text-white font-normal text-md sm:text-2xl drop-shadow-md'>
                                             {country.countryTitle}
                                         </p>
                                     </div>
-                                    <p className='text-5xl md:text-7xl textShadow font-normal'>
+                                    <p className='text-xl sm:text-5xl md:text-7xl drop-shadow-md font-normal'>
                                         {country.subTitle}
                                     </p>
-                                    <article className='text-2xl textShadow font-normal hidden md:block'>
+                                    <article className='text-md sm:text-2xl drop-shadow-md font-normal mx-2 sm:mx-0'>
                                         <PortableText value={country.shortDescription} />
                                     </article>
-                                    <div className='w-3/4 xl:w-2/3 flex flex-col justify-start items-center gap-4'>
+                                    <div className='w-[96%] xl:w-2/3 flex flex-col justify-start items-center gap-4'>
                                         <Link
                                             href={`/topCountries/${country.slug}`}
-                                            className='bg-[#ff033a] px-6 py-4 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-lg text-xl'
+                                            className='bg-white/10 sm:bg-[#ff033a] px-2 sm:px-6 py-4 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-lg text-xl rounded-2xl sm:rounded-none'
                                         >
-                                            <p className='flex flex-col items-center font-normal text-2xl'>
+                                            <p className='text-center font-normal text-lg sm:text-2xl text-white'>
                                                 Смотреть агентства
                                             </p>
                                         </Link>
