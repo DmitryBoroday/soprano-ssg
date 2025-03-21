@@ -51,13 +51,13 @@ export default function LocationCoSwiper({ data }: any) {
                                         <div className='bg-gradient-to-r from-transparent via-black to-transparent flex items-center justify-around rounded-xl py-2 w-5/6 min-w-[220px]  shadow-lg text-white'>
                                             <div className='flex flex-col items-center gap-2 px-2 pt-8'>
                                                 <div className='flex items-center border-b-[1px] border-neutral-400'>
-                                                    <p className='text-center text-2xl font-normal w-full textShadow'>
+                                                    <h1 className='text-center text-2xl font-normal w-full textShadow'>
                                                         {country.countryTitle}
-                                                    </p>
+                                                    </h1>
                                                 </div>
-                                                <p className='textShadow font-normal text-md text-center'>
+                                                <h2 className='textShadow font-normal text-md text-center'>
                                                     <PortableText value={country.shortDescription} />
-                                                </p>
+                                                </h2>
                                                 <ChevronDown size={32} />
                                             </div>
                                         </div>
@@ -125,10 +125,10 @@ export default function LocationCoSwiper({ data }: any) {
                                         fetchPriority='high'
                                         loading='eager'
                                     />
-                                    <div className='absolute inset-0 text-sm flex flex-col items-center justify-end pb-2 sm:pb-3'>
+                                    <div className='absolute inset-0 text-sm flex flex-col items-center justify-end pb-3'>
                                         <img
                                             title='inside img flag or ava'
-                                            className='object-cover w-8 h-8 bg-black rounded-full shadow-md'
+                                            className='object-cover w-8 sm:w-10 h-4 sm:h-6 bg-black rounded-sm sm:rounded-md shadow-md'
                                             src={country.flagImage}
                                             alt='inside img flag or ava'
                                             width={32}

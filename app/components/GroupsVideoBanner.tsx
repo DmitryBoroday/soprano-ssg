@@ -40,7 +40,7 @@ export default function GroupsVideoBanner() {
                                 href='/groups'
                                 className='bg-[#ff033a] px-2 py-4 md:py-6 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-md cursor-pointer flex justify-center items-center'
                             >
-                                <h3 className='text-xl md:text-2xl'>Перейти в группы</h3>
+                                <h3 className='text-xl md:text-2xl pb-1'>Перейти в группы</h3>
                                 <ChevronRight size={28} />
                             </Link>
                         </nav>

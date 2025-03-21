@@ -31,7 +31,7 @@ export default function BlogBanner() {
                             href='/blogs'
                             className='bg-[#ff033a] px-2 py-4 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-lg text-xl flex justify-center items-center'
                         >
-                            <p>Смотреть наш блог</p>
+                            <p className='pb-1 font-bold'>Смотреть наш блог</p>
                             <ChevronRight size={28} />
                         </Link>
                     </div>

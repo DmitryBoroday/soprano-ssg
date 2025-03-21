@@ -14,7 +14,7 @@ export default function VipBanner() {
                             href='/vipVacancies'
                             className='bg-[#ff033a] px-2 py-4 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-lg text-xl flex justify-center items-center text-white'
                         >
-                            <p>Смотреть вакансии</p>
+                            <p className='pb-1 font-bold'>Смотреть вакансии</p>
                             <ChevronRight size={28} />
                         </Link>
                     </div>
@@ -40,9 +40,9 @@ export default function VipBanner() {
                 <div className='xl:hidden font-bold text-white'>
                     <Link
                         href='/vipVacancies'
-                        className='bg-[#ff033a] px-6 py-4 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-lg text-xl flex justify-center items-center '
+                        className='bg-[#ff033a] px-6 py-4 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-lg text-xl flex justify-center items-center'
                     >
-                        <p>Смотреть вакансии</p>
+                        <p className='pb-1'>Смотреть вакансии</p>
                         <ChevronRight size={28} />
                     </Link>
                 </div>

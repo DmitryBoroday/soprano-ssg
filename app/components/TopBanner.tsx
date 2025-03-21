@@ -37,7 +37,7 @@ export default function TopBanner() {
                             href='/topCountries'
                             className='bg-[#ff033a] px-2 py-4 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-lg text-xl flex justify-center items-center font-bold'
                         >
-                            <p>Топ страны</p>
+                            <p className='pb-1'>Топ страны</p>
                             <ChevronRight size={28} />
                         </Link>
                     </nav>

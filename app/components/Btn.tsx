@@ -11,11 +11,11 @@ function Box() {
     const [isPresent, safeToRemove] = usePresence()
 
     const btnContent = {
-        title: 'btn title',
+        title: 'НАШИ КОНТАКТЫ',
         link: 'https://t.me/sopranogroups',
-        linkTitle: 'btn tg title',
+        linkTitle: 'Стать участником канала',
         linkTwo: 'https://t.me/+SvfyRiO503JiYzFi',
-        linkTwoTitle: 'btn chanel title',
+        linkTwoTitle: 'Перейти в Telegram',
     }
 
     useEffect(() => {
@@ -34,7 +34,7 @@ function Box() {
             className='fixed bottom-8 lg:bottom-12 right-[72px] lg:right-[80px] w-64 h-72 bg-gradient-to-r from-pink-500 to-purple-700 rounded-tl-xl rounded-tr-xl rounded-bl-xl z-50 flex flex-col justify-center items-center gap-4 p-4 text-center text-white'
             ref={ref}
         >
-            <h1 className='text-xl drop-shadow font-bold'>{btnContent.title}</h1>
+            <h1 className='text-xl drop-shadow'>{btnContent.title}</h1>
             <Link
                 className='px-4 py-2 shadow-md shadow-pink-500 hover:shadow-pink-300 transition-all duration-300 rounded-2xl'
                 href={btnContent.linkTwo}
@@ -47,7 +47,6 @@ function Box() {
             >
                 {btnContent.linkTitle}
             </Link>
-
             <p>SopranoGroups@gmail.com</p>
         </motion.div>
     )
@@ -64,7 +63,7 @@ export default function AnimatedBtn() {
                     onClick={() => {
                         setShow(!show)
                     }}
-                    className='w-full h-full rounded-full flex items-center justify-center hover:text-violet-600'
+                    className='w-full h-full rounded-full flex items-center justify-center hover:cursor-pointer'
                 >
                     {show ? <X size={16} /> : <Info size={18} />}
                 </motion.button>

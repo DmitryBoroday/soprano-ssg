@@ -9,6 +9,7 @@ import 'swiper/css/thumbs'
 import 'swiper/css/navigation'
 import Link from 'next/link'
 import { PortableText } from 'next-sanity'
+import { ChevronDown } from 'lucide-react'
 
 export default function TopCountriesSwiper({ data }: any) {
     const [thumbsSwiper, setThumbsSwiper]: any = useState(null)
@@ -25,7 +26,7 @@ export default function TopCountriesSwiper({ data }: any) {
                 {data.map((country: any, idx: any) => (
                     <SwiperSlide key={idx}>
                         <div className='w-full h-full relative'>
-                            {/* <div className='absolute inset-0 md:hidden flex flex-col justify-center items-center px-2 bg-gradient-to-t from-black via-white/10 to-white/10'>
+                            <div className='absolute inset-0 md:hidden flex flex-col justify-center items-center px-2 bg-gradient-to-t from-black via-white/10 to-white/10'>
                                 <Link
                                     href={`/topCountries/${country.slug}`}
                                     className='flex items-center rounded-full p-1 text-white gap-2'
@@ -58,9 +59,9 @@ export default function TopCountriesSwiper({ data }: any) {
                                         </div>
                                     </div>
                                 </Link>
-                            </div> */}
-                            <div className='absolute w-full h-full left-0 bottom-0 md:top-0 flex flex-col justify-center items-center md:items-start md:pl-24'>
-                                <div className='w-3/4 md:w-1/2 xl:w-1/3 flex flex-col justify-center items-center md:items-start text-center font-bold  md:text-start gap-2 sm:gap-4 mb-8 md:mb-0 bg-white/20 backdrop-blur-sm sm:backdrop-blur-none sm:bg-transparent border-[1px] sm:border-none text-white rounded-3xl py-2'>
+                            </div>
+                            <div className='absolute w-full h-full left-0 bottom-0 md:top-0 hidden md:flex flex-col justify-center items-center md:items-start md:pl-24'>
+                                <div className='w-3/4 md:w-1/2 xl:w-1/3 flex flex-col justify-center items-center md:items-start text-center font-bold  md:text-start gap-2 sm:gap-4 mb-8 md:mb-0 text-white'>
                                     <div className='relative flex flex-col sm:flex-row items-center justify-center text-center'>
                                         <img
                                             title='Флаг страны'
@@ -72,13 +73,13 @@ export default function TopCountriesSwiper({ data }: any) {
                                             fetchPriority='high'
                                             loading='eager'
                                         />
-                                        <p className='sm:pl-2 text-white font-normal text-md sm:text-2xl drop-shadow-md'>
+                                        <h1 className='sm:pl-2 text-white font-normal text-md sm:text-2xl drop-shadow-md'>
                                             {country.countryTitle}
-                                        </p>
+                                        </h1>
                                     </div>
-                                    <p className='text-xl sm:text-5xl md:text-7xl drop-shadow-md font-normal'>
+                                    <h2 className='text-xl sm:text-5xl md:text-7xl drop-shadow-md font-normal'>
                                         {country.subTitle}
-                                    </p>
+                                    </h2>
                                     <article className='text-md sm:text-2xl drop-shadow-md font-normal mx-2 sm:mx-0'>
                                         <PortableText value={country.shortDescription} />
                                     </article>

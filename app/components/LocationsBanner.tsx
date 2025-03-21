@@ -17,7 +17,7 @@ export default function LocationsBanner() {
                             href='/locations'
                             className='bg-[#ff033a] px-2 py-4 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-lg text-xl flex justify-center items-center'
                         >
-                            <p>Выбрать направление</p>
+                            <p className='pb-1 font-bold'>Выбрать направление</p>
                             <ChevronRight size={28} />
                         </Link>
                     </nav>

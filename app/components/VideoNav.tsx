@@ -111,7 +111,7 @@ export default function VideoNav() {
                                             href={videoBanner.link}
                                             className='bg-[#ff033a] px-2 py-4 md:py-6 w-full hover:bg-[#c9002c] transition-all duration-300 shadow-md cursor-pointer flex justify-center items-center'
                                         >
-                                            <p className='text-xl text-white md:text-2xl'>
+                                            <p className='pb-1 text-xl text-white md:text-2xl'>
                                                 {videoBanner.buttonText}
                                             </p>
                                             <ChevronRight size={28} />
