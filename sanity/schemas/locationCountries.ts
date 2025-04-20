@@ -14,6 +14,16 @@ const locationCountries = {
       type: 'slug',
       options: {source: 'locationTitle'},
     },
+      {
+      name: 'metaTitle',
+      title: 'Meta Title',
+      type: 'string',
+    },
+      {
+      name: 'metaDescription',
+      title: 'Meta Description',
+      type: 'string',
+    },
     {
       name: 'locationFlagImage',
       title: 'Location Flag Image',

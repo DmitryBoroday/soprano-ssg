@@ -1,9 +1,20 @@
 import AgenciesSwiper from '@/app/components/AgenciesSwiper'
 import BottomNav from '@/app/components/BottomNav'
 import { getCountryAgencies } from '@/sanity/sanity-utils'
+import { Metadata } from 'next'
 import { PortableText } from 'next-sanity'
 
 type Props = { params: Promise<{ countryAgenciesId: string }> }
+
+export async function generateMetadata(props: Props): Promise<Metadata> {
+    const params = await props.params
+    const slug = params.countryAgenciesId
+    const data = await getCountryAgencies(slug)
+    return {
+        title: data.metaTitle,
+        description: data.metaDescription
+    }
+}
 
 export default async function CountryAgencies(props: Props) {
     const params = await props.params

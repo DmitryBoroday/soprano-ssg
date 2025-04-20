@@ -4,6 +4,8 @@ export type CountryAgencies = {
     _id: string,
     _createdAt: Date,
     slug: string,
+    metaTitle: string,
+    metaDescription: string,
     countryTitle: string,
     desktopImage: string,
     mobileImage: string,

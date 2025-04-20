@@ -4,6 +4,8 @@ export type Locations = {
     _id: string,
     _createdAt: Date,
     slug: string,
+    metaTitle: string,
+    metaDescription: string,
     locationTitle: string,
     locationSubTitle: string,
     locationFlagImage: string,

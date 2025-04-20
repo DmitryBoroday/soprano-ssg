@@ -4,7 +4,12 @@ import Link from 'next/link'
 import { MoveLeft, MoveRight } from 'lucide-react'
 import LocationsSwiper from '../components/LocationsSwiper'
 import { getLocations } from '@/sanity/sanity-utils'
+import { Metadata } from 'next'
 
+export const metadata: Metadata = {
+    title: 'Все больше и больше девушек выбирают работу в эскорте за границей',
+    description: 'Работа в эскорте за границей так привлекательна для девушек потому что здесь предоставляется возможность познакомиться с разными богатыми клиентами и путешествовать по разным странам'
+}
 
 export default async function Locations() {
     const data = await getLocations()

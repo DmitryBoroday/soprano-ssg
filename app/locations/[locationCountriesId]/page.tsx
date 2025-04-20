@@ -1,9 +1,20 @@
-import BottomNav from '@/app/components/BottomNav';
-import LocationCoSwiper from '@/app/components/LocationCoSwiper';
-import { getLocationCountries } from '@/sanity/sanity-utils';
+import BottomNav from '@/app/components/BottomNav'
+import LocationCoSwiper from '@/app/components/LocationCoSwiper'
+import { getLocationCountries } from '@/sanity/sanity-utils'
+import { Metadata } from 'next'
 
 
 type Props = { params: Promise<{ locationCountriesId: string }> }
+
+export async function generateMetadata(props: Props): Promise<Metadata> {
+    const params = await props.params
+    const slug = params.locationCountriesId
+    const data = await getLocationCountries(slug)
+    return {
+        title: data.metaTitle,
+        description: data.metaDescription
+    }
+}
 
 export default async function LocationCountries(props: Props) {
     const params = await props.params

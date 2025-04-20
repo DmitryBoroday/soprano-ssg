@@ -203,6 +203,8 @@ export async function getLocationCountries(slug: string): Promise<Locations> {
         groq`*[_type == 'locationCountries' && slug.current == $slug][0] {
             _id,
             _createdAt,
+             metaTitle,
+             metaDescription,
              locationTitle,
              shortDescription,
              mainDescription,
@@ -228,6 +230,8 @@ export async function getCountryAgencies(slug: string): Promise<CountryAgencies>
             _id,
             _createdAt,
              countryTitle,
+             metaTitle,
+             metaDescription,
              shortDescription,
              mainDescription,
              mainDescriptionTwo,

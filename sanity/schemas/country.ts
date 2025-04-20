@@ -14,6 +14,16 @@ const country = {
       type: 'slug',
       options: {source: 'countryTitle'},
     },
+     {
+      name: 'metaTitle',
+      title: 'Meta Title',
+      type: 'string',
+    },
+     {
+      name: 'metaDescriptio',
+      title: 'Meta Description',
+      type: 'string',
+    },
     {
       name: 'desktopImage',
       title: 'Desktop Image',
