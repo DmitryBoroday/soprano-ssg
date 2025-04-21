@@ -56,7 +56,6 @@ export default function Groups() {
                     ></source>
                 </video>
                 <GroupsSwiper data={data} />
-                {/* <MainSwiper data={data} /> */}
                 <p className='absolute top-3 w-full flex flex-col items-center justify-center z-20 text-center font-[600] tracking-widest text-[#ff033a] text-xl sm:text-4xl logo logoShadow'>
                     SOPRANO ESCORT
                 </p>

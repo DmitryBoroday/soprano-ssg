@@ -1,9 +1,20 @@
 import { getAgency } from '@/sanity/sanity-utils'
 import { ArrowRight, Phone, Send, Square } from 'lucide-react'
+import { Metadata } from 'next'
 import { PortableText } from 'next-sanity'
 import Link from 'next/link'
 
 type Props = { params: Promise<{ agencyId: string }> }
+
+export async function generateMetadata(props: Props): Promise<Metadata> {
+    const params = await props.params
+    const slug = params.agencyId
+    const data = await getAgency(slug)
+    return {
+        title: data.agencyName,
+        description: data.shortContent
+    }
+}
 
 export default async function TopCountryAgency(props: Props) {
     const params = await props.params

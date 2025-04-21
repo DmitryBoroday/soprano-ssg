@@ -15,20 +15,18 @@ const topCountry = {
       options: {source: 'countryTitle'},
     },
     {
+      name: 'metaTitle',
+      title: 'Meta Title',
+      type: 'string',
+    },
+    {
+      name: 'metaDescription',
+      title: 'Meta Description',
+      type: 'string',
+    },
+    {
       name: 'flagImage',
       title: 'Flag Image',
-      type: 'image',
-      options: {hotspot: true},
-    },
-    {
-      name: 'desktopImage',
-      title: 'Desktop Image',
-      type: 'image',
-      options: {hotspot: true},
-    },
-    {
-      name: 'mobileImage',
-      title: 'Mobile Image',
       type: 'image',
       options: {hotspot: true},
     },

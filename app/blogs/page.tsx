@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import BottomNav from '../components/BottomNav'
-import { ArrowRight, MoveLeft, MoveRight } from 'lucide-react'
+import { MoveLeft, MoveRight } from 'lucide-react'
 import BlogSwiper from '../components/BlogSwiper'
 import { getBlogTopics } from '@/sanity/sanity-utils'
 

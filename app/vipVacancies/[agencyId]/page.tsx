@@ -4,8 +4,19 @@ import { getVipVacancy } from '@/sanity/sanity-utils'
 import { MoveLeft } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
+import { Metadata } from 'next'
 
 type Props = { params: Promise<{ agencyId: string }> }
+
+export async function generateMetadata(props: Props): Promise<Metadata> {
+    const params = await props.params
+    const slug = params.agencyId
+    const data = await getVipVacancy(slug)
+    return {
+        title: data.vipAgencyName,
+        description: data.shortContent
+    }
+}
 
 export default async function VipAgency(props: Props) {
     const params = await props.params

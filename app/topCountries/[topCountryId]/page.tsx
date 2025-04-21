@@ -2,46 +2,21 @@ import BottomNav from '@/app/components/BottomNav'
 import TopCoAgenciesSwiper from '@/app/components/TopCoAgenciesSwiper'
 import { getTopCountry } from '@/sanity/sanity-utils'
 import { MoveLeft } from 'lucide-react'
+import { Metadata } from 'next'
 import Link from 'next/link'
 
-// const data = {
-//     countryTitle: 'Japan',
-//     flagImage: '/images/swiperData/flag4.jpg',
-//     relatedAgencies: [
-//         {
-//             link: '/topCountries/1/1',
-//             agencyName: 'Agency Name 1',
-//             shortContent: 'Short content 1',
-//             thumbImage: '/images/swiperData/ava1.jpg',
-//         },
-//         {
-//             link: '/topCountries/1/1',
-//             agencyName: 'Agency Name 2',
-//             shortContent: 'Short content 2',
-//             thumbImage: '/images/swiperData/ava2.jpg',
-//         },
-//         {
-//             link: '/topCountries/1/1',
-//             agencyName: 'Agency Name 3',
-//             shortContent: 'Short content 3',
-//             thumbImage: '/images/swiperData/ava3.jpg',
-//         },
-//         {
-//             link: '/topCountries/1/1',
-//             agencyName: 'Agency Name 4',
-//             shortContent: 'Short content 4',
-//             thumbImage: '/images/swiperData/ava4.jpg',
-//         },
-//         {
-//             link: '/topCountries/1/1',
-//             agencyName: 'Agency Name 5',
-//             shortContent: 'Short content 5',
-//             thumbImage: '/images/swiperData/ava5.jpg',
-//         },
-//     ]
-// }
 
 type Props = { params: Promise<{ topCountryId: string }> }
+
+export async function generateMetadata(props: Props): Promise<Metadata> {
+    const params = await props.params
+    const slug = params.topCountryId
+    const data = await getTopCountry(slug)
+    return {
+        title: data.metaTitle,
+        description: data.metaDescription
+    }
+}
 
 export default async function TopCountry(props: Props) {
     const params = await props.params

@@ -80,6 +80,8 @@ export async function getTopCountry(slug: string): Promise<TopCountry>{
             _id,
             _createdAt,
             countryTitle,
+            metaTitle,
+            metaDescription,
             'slug': slug.current,
             'flagImage': flagImage.asset->url,
             'relatedAgencies': relatedAgencies[]->{

@@ -4,6 +4,8 @@ export type TopCountry = {
     _id: string,
     _createdAt: Date,
     slug: string,
+    metaTitle: string,
+    metaDescription: string,
     countryTitle: string,
     flagImage: string,
     desktopImage: string,

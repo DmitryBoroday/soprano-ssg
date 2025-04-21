@@ -3,7 +3,12 @@ import BottomNav from '../components/BottomNav'
 import { MoveLeft, MoveRight } from 'lucide-react'
 import { getVipVacancies } from '@/sanity/sanity-utils'
 import VipAgencySwiper from '../components/VipAgencySwiper'
+import { Metadata } from 'next'
 
+export const metadata: Metadata = {
+    title: 'Вип вакансии в эскорте за границей от Soprano Escort',
+    description: 'Работа в качестве эскорт-модели в вип агентстве имеет ряд преимуществ по сравнению с самостоятельной работой'
+}
 
 export default async function VipVacancies() {
 
