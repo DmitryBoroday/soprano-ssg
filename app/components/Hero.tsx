@@ -8,11 +8,11 @@ export default function Hero() {
             <picture className='w-full h-full'>
                 <source
                     media='(min-width: 640px)'
-                    srcSet='/images/hero/desk.jpg'
+                    srcSet='/images/hero/deskAvif.avif'
                 />
                 <img
                     title='Топ Эскорт - Работа в эскорте по всему миру'
-                    src='/images/hero/mob.jpg'
+                    src='/images/hero/mobAvif.avif'
                     className='bg-black object-cover w-full h-full shadow-sm shadow-black/40'
                     alt='Топ Эскорт - Работа в эскорте по всему миру'
                     width={400}
