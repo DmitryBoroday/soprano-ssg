@@ -9,16 +9,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: 'https://sopranoescort.com/about',
+      url: 'https://sopranoescort.com/locations',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: 'https://sopranoescort.com/vipVacancies',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+     {
+      url: 'https://sopranoescort.com/topCountries',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+      {
+      url: 'https://sopranoescort.com/groups',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    {
-      url: 'https://sopranoescort.com/blog',
+        {
+      url: 'https://sopranoescort.com/blogs',
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.5,
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
   ]
 }
