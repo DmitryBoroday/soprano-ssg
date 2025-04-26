@@ -3,6 +3,23 @@ import { PortableText } from 'next-sanity'
 
 type Props = { params: Promise<{ blogId: string }> }
 
+export async function generateMetadata(props: Props) {
+    const params = await props.params
+    const slug = params.blogId
+    const blog = await getBlog(slug)
+    return {
+        title: blog.blogTitle,
+        description: blog.mainContentOne,
+        openGraph: {
+            images: blog.desktopImageOne,
+            title: blog.blogTitle,
+            description: blog.mainContentOne,
+            url: blog.slug,
+            type: 'website'
+        }
+    }
+}
+
 export default async function Blog(props: Props) {
     const params = await props.params
     const slug = params.blogId

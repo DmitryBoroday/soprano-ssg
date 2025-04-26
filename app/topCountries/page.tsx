@@ -4,7 +4,21 @@ import { MoveLeft, MoveRight } from 'lucide-react'
 import Link from 'next/link'
 import TopCountriesSwiper from '../components/TopCountriesSwiper'
 import { getTopCountries } from '@/sanity/sanity-utils'
+import { Metadata } from 'next'
 
+export const metadata: Metadata = {
+    title: 'Вакансии в эскорте в топовых странах от Soprano Escort',
+    description: 'Каждое эскорт-агентство проходит проверку на наличие в черном списке и отбираются только топовые, что бы предоставить самые лучшие условия работы девушек за границей',
+    twitter: {
+        card: 'summary_large_image'
+    },
+    openGraph: {
+        title: 'Вакансии в эскорте в топовых странах от Soprano Escort',
+        description: 'Каждое эскорт-агентство проходит проверку на наличие в черном списке и отбираются только топовые, что бы предоставить самые лучшие условия работы девушек за границей',
+        url: 'https://www.sopranoescort.com/topCountries',
+        type: 'website'
+    }
+}
 
 export default async function TopCountries() {
     const data = await getTopCountries()

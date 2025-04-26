@@ -7,7 +7,17 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
     title: 'Вип вакансии в эскорте за границей от Soprano Escort',
-    description: 'Работа в качестве эскорт-модели в вип агентстве имеет ряд преимуществ по сравнению с самостоятельной работой'
+    description: 'Работа в качестве эскорт-модели в вип агентстве имеет ряд преимуществ по сравнению с самостоятельной работой',
+    twitter: {
+        card: 'summary_large_image'
+    },
+    openGraph: {
+        images: '',
+        title: 'Вип вакансии в эскорте за границей от Soprano Escort',
+        description: 'Работа в качестве эскорт-модели в вип агентстве имеет ряд преимуществ по сравнению с самостоятельной работой',
+        url: 'https://www.sopranoescort.com/vipVacancies',
+        type: 'website'
+    }
 }
 
 export default async function VipVacancies() {

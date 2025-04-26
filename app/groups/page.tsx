@@ -3,6 +3,21 @@ import BottomNav from '../components/BottomNav'
 import Link from 'next/link'
 import { MoveLeft, MoveRight } from 'lucide-react'
 import GroupsSwiper from '../components/GroupsSwiper'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Условия работы девушек в эскорте за границей',
+    description: 'Станьте участницей наших групп, узнайте об условиях работы моделью и отзывах девушек. Отзывы девушек о работе в эскорте',
+    twitter: {
+        card: 'summary_large_image'
+    },
+    openGraph: {
+        title: 'Условия работы девушек в эскорте за границей',
+        description: 'Станьте участницей наших групп, узнайте об условиях работы моделью и отзывах девушек. Отзывы девушек о работе в эскорте',
+        url: 'https://www.sopranoescort.com/groups',
+        type: 'website'
+    }
+}
 
 const data = [
     {

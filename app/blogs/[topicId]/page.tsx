@@ -3,8 +3,24 @@ import { MoveLeft } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
-
 type Props = { params: Promise<{ topicId: string }> }
+
+export async function generateMetadata(props: Props) {
+    const params = await props.params
+    const slug = params.topicId
+    const data = await getBlogTopic(slug)
+    return {
+        title: data.categoryTitle,
+        description: data.shortDescription,
+        openGraph: {
+            images: data.mobileImage,
+            title: data.categoryTitle,
+            description: data.shortDescription,
+            url: data.slug,
+            type: 'website'
+        }
+    }
+}
 
 export default async function Topic(props: Props) {
     const params = await props.params

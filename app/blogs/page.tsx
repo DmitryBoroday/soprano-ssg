@@ -3,7 +3,21 @@ import BottomNav from '../components/BottomNav'
 import { MoveLeft, MoveRight } from 'lucide-react'
 import BlogSwiper from '../components/BlogSwiper'
 import { getBlogTopics } from '@/sanity/sanity-utils'
+import { Metadata } from 'next'
 
+export const metadata: Metadata = {
+    title: 'Тут собраны актуальные статьи по теме эскорта',
+    description: 'Эскорт - индустрия является одной из сфер, где девушки могут найти легальную работу с высоким зароботком. Как выбрать агентство для работы в эскорте. Подготовка в твой первый тур - что необходимо знать',
+    twitter: {
+        card: 'summary_large_image'
+    },
+    openGraph: {
+        title: 'Тут собраны актуальные статьи по теме эскорта',
+        description: 'Эскорт - индустрия является одной из сфер, где девушки могут найти легальную работу с высоким зароботком. Как выбрать агентство для работы в эскорте. Подготовка в твой первый тур - что необходимо знать',
+        url: 'https://www.sopranoescort.com/blogs',
+        type: 'website'
+    }
+}
 
 export default async function Blogs() {
     const data = await getBlogTopics()
