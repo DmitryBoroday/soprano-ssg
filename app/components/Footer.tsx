@@ -10,7 +10,7 @@ export default function Footer() {
                 </p>
             </div>
             <div className='py-2 w-full sm:w-2/3 text-center border-t-[1px] border-neutral-800'>
-                <p className='text-neutral-500 font-bold text-xs text-center'>
+                <p className='text-neutral-500 font-bold text-xs text-center px-4'>
                     <span className='text-neutral-400 font-bold text-sm pr-2'>
                         Soprano Escort
                     </span>
@@ -18,7 +18,7 @@ export default function Footer() {
                 </p>
             </div>
             <div className='text-[8px] text-white border-t-[1px] border-neutral-800 py-2'>
-                <p>Site created by <span><Link target='blank' href={'https://ssg-bio.vercel.app/'}>Digital Orca</Link></span> @ 2024</p>
+                <p>Since @ 2024</p>
             </div>
         </footer>
     )

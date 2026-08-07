@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function TopBanner() {
     return (
-        <section className='w-full h-full bg-black flex flex-col justify-center items-center py-12 md:py-24'>
+        <section className='w-full h-full bg-black flex flex-col justify-center items-center py-24 md:py-48'>
             <div className='text-white w-full md:w-5/6 h-full flex flex-col xl:flex-row justify-between items-center gap-6 md:gap-12'>
                 <div>
                     <video
@@ -31,7 +31,7 @@ export default function TopBanner() {
                 <article className='w-full flex flex-col items-center sm:items-start gap-2 xl:gap-4 text-center xl:text-start sm:w-2/3 xl:w-1/3 px-2 text-white font-normal'>
                     <p className='text-sm'>SOPRANO ESCORT</p>
                     <p className='text-4xl sm:text-5xl'>ТОП СТРАНЫ</p>
-                    <p className='text-lg'>Каждое эскорт-агентство проходит проверку на наличие в черном списке и отбираются только топовые, что бы предоставить самые лучшие условия работы девушек за границей</p>
+                    <p className='text-lg lg:px-0 px-8'>Каждое эскорт-агентство проходит проверку на наличие в черном списке и отбираются только топовые, что бы предоставить самые лучшие условия работы девушек за границей</p>
                     <nav className='w-5/6 '>
                         <Link
                             href='/topCountries'

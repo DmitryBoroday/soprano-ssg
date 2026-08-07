@@ -39,7 +39,7 @@ export default function BenefitsGrid() {
         <section className='bg-black w-full h-full flex flex-col justify-center items-center py-2 md:py-12 text-white'>
             <div className='flex flex-col items-center justify-center gap-2 w-full px-2 pb-8 font-bold'>
                 <p>SOPRANO ESCORT</p>
-                <p className='text-3xl font-medium drop-shadow-lg text-center'>
+                <p className='text-3xl font-medium drop-shadow-lg text-center px-4'>
                     ПРЕИМУЩЕСТВА РАБОТЫ С НАМИ
                 </p>
             </div>

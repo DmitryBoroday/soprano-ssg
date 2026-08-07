@@ -3,12 +3,12 @@ import Link from 'next/link'
 
 export default function VipBanner() {
     return (
-        <section className='w-full h-full flex flex-col justify-center items-center py-12'>
+        <section className='w-full h-full flex flex-col justify-center items-center py-24 lg:py-48'>
             <div className='text-white font-normal w-full md:w-5/6 h-full flex flex-col xl:flex-row justify-between items-center gap-6 md:gap-12'>
                 <article className='w-full flex flex-col gap-2 xl:gap-4 text-center xl:text-start sm:w-2/3 xl:w-1/3 px-2'>
                     <p className='text-sm'>SOPRANO ESCORT</p>
                     <p className='text-4xl sm:text-5xl'>ВИП ВАКАНСИИ</p>
-                    <p>Каждое эскорт-агентство проходит проверку на наличие в черном списке и отбираются только топовые, что бы предоставить самые лучшие условия работы девушек за границей</p>
+                    <p className='lg:px-0 px-8'>Каждое эскорт-агентство проходит проверку на наличие в черном списке и отбираются только топовые, что бы предоставить самые лучшие условия работы девушек за границей</p>
                     <div className='w-full hidden xl:block'>
                         <Link
                             href='/vipVacancies'

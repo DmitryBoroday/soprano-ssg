@@ -22,7 +22,7 @@ export default function Testimonials() {
 
     return (
         <section
-            className='bg-black w-full h-full flex flex-col justify-center items-center'
+            className='bg-black w-full h-full flex flex-col justify-center items-center lg:py-48 py-24'
         >
             <div className='flex justify-center text-center w-full px-2 md:px-28 pt-16 sm:pt-12'>
                 <p className='text-white text-4xl font-bold drop-shadow-lg'>
